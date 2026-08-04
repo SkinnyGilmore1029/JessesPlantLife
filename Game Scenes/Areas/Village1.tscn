@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://hyxcja6cim1a"]
+
+[ext_resource type="Script" uid="uid://dwfs4m2mi1wt0" path="res://Game Scenes/AreaScripts/village_1.gd" id="1_si2fc"]
+[ext_resource type="PackedScene" uid="uid://buo7adliqj66j" path="res://Game Scenes/Land/Town.tscn" id="2_d4rjv"]
+
+[node name="Village1" type="Node2D" unique_id=454401448]
+script = ExtResource("1_si2fc")
+
+[node name="Town" parent="." unique_id=1348739030 instance=ExtResource("2_d4rjv")]

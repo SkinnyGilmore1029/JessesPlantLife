@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AreaConnections" format=3 uid="uid://cgepjoxcmnwkw"]
+
+[ext_resource type="Script" uid="uid://d0oggue18tcym" path="res://Managers/SystemManagers/Connector_Manager.gd" id="1_8orp7"]
+
+[resource]
+script = ExtResource("1_8orp7")
+Connection_name = &"wild1"
+send_to = "uid://cnby1wjm8of5e"
+spawn_at = Vector2(5, 20)
+metadata/_custom_type_script = "uid://d0oggue18tcym"

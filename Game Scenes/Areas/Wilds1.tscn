@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://blkfw7f5x6o21"]
+
+[ext_resource type="PackedScene" uid="uid://cnby1wjm8of5e" path="res://Game Scenes/Land/wild1.tscn" id="1_uohsc"]
+
+[node name="Wilds1" type="Node2D" unique_id=1938388305]
+
+[node name="Wild1" parent="." unique_id=1421798055 instance=ExtResource("1_uohsc")]

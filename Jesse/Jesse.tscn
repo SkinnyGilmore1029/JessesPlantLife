@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dnie8im41udp7"]
+
+[ext_resource type="Script" uid="uid://ctdhbdn4figlt" path="res://Jesse/JesseScripts/jesseb.gd" id="1_7lwai"]
+[ext_resource type="Script" uid="uid://c1q7tdehspm3q" path="res://Jesse/JesseScripts/walk_state.gd" id="3_nmhgq"]
+[ext_resource type="Script" uid="uid://u66avsyksvgp" path="res://Managers/Scripts/node_state_machine.gd" id="3_pfpo0"]
+[ext_resource type="Texture2D" uid="uid://l7ngwqu0vwfd" path="res://Assets/Pictures/People/Jesse.png" id="5_k20bo"]
+[ext_resource type="Script" uid="uid://c2i5s8iy6673d" path="res://Jesse/JesseScripts/Idle_state.gd" id="5_yaf2p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfj4v"]
+size = Vector2(7.5, 20)
+
+[node name="Jesse" type="CharacterBody2D" unique_id=1022458752 groups=["Player"]]
+script = ExtResource("1_7lwai")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=290808508]
+texture = ExtResource("5_k20bo")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=811349034]
+limit_left = -100
+limit_top = -200
+limit_right = 1900
+limit_bottom = 1150
+editor_draw_limits = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1723299549]
+position = Vector2(-2, 3)
+shape = SubResource("RectangleShape2D_tfj4v")
+debug_color = Color(0, 1, 0, 0.3019608)
+
+[node name="StateMachine" type="Node" parent="." unique_id=808417085 node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("3_pfpo0")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=267601479 node_paths=PackedStringArray("jesse")]
+script = ExtResource("5_yaf2p")
+jesse = NodePath("../..")
+
+[node name="Walk" type="Node" parent="StateMachine" unique_id=653893790 node_paths=PackedStringArray("jesse")]
+script = ExtResource("3_nmhgq")
+jesse = NodePath("../..")
+
+[connection signal="ready" from="." to="." method="_on_ready"]

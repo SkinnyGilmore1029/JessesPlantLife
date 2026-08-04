@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Plant_manager" format=3 uid="uid://bk32hrett7887"]
+
+[ext_resource type="Script" uid="uid://1tnvakcbm3w3" path="res://Managers/SystemManagers/Plant_Manager.gd" id="1_771uw"]
+
+[resource]
+script = ExtResource("1_771uw")
+plant_id = 1
+metadata/_custom_type_script = "uid://1tnvakcbm3w3"

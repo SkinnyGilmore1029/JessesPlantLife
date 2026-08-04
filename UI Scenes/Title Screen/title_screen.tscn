@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://osngv2kbelgc"]
+
+[ext_resource type="Texture2D" uid="uid://c7d2prhtkwqjp" path="res://Assets/Pictures/Plants/Starting_seed.png" id="1_gk3e6"]
+[ext_resource type="PackedScene" uid="uid://dfibjrmth4qfa" path="res://UI Scenes/Title Screen/TitleOptions.tscn" id="2_wi1nd"]
+
+[node name="title_screen" type="Control" unique_id=2112494425]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=436143058]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 641.0
+offset_bottom = 357.0
+color = Color(1, 1, 0.6862745, 1)
+
+[node name="TitleOptions" parent="." unique_id=720301809 instance=ExtResource("2_wi1nd")]
+layout_mode = 1
+offset_right = -639.0
+offset_bottom = -356.0
+
+[node name="Label" type="Label" parent="." unique_id=148116700]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 42.0
+offset_right = 597.0
+offset_bottom = 150.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(15, 0)
+theme_override_colors/font_color = Color(0, 0.6666667, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.53333336, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 71
+text = "Jesse Plant Life"
+
+[node name="Seed1" type="Sprite2D" parent="." unique_id=233430007]
+position = Vector2(39, 318)
+texture = ExtResource("1_gk3e6")
+
+[node name="Seed2" type="Sprite2D" parent="." unique_id=1577832614]
+position = Vector2(601, 312)
+texture = ExtResource("1_gk3e6")

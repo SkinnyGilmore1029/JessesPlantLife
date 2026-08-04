@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://im0lv2lkj3i1"]
+
+[ext_resource type="Script" uid="uid://qvbv8q847dvt" path="res://Components/ComponentScripts/area_connecter.gd" id="1_c35lr"]
+
+[node name="AreaConnecter" type="Area2D" unique_id=1370263249]
+script = ExtResource("1_c35lr")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

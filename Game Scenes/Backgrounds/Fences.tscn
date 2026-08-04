@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://fhb40oivj76t"]
+
+[ext_resource type="Texture2D" uid="uid://buxfurlupxc4x" path="res://Assets/Pictures/Borders/Yard Fence.png" id="1_tjhji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i2i81"]
+size = Vector2(66, 64)
+
+[node name="Node2D" type="StaticBody2D" unique_id=1451711108]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1016483683]
+texture = ExtResource("1_tjhji")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=608253210]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_i2i81")

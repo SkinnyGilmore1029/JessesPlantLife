@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://exl0gdavtrcm"]
+
+[ext_resource type="Texture2D" uid="uid://dq4x4ip88aln3" path="res://Assets/Pictures/Backgrounds/jesse3.png" id="1_6fmsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tfj4v"]
+size = Vector2(63, 62)
+
+[node name="House1" type="StaticBody2D" unique_id=1997855094]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1723364028]
+texture = ExtResource("1_6fmsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=309876946]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_tfj4v")

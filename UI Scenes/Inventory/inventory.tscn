@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2juw2hxqun8o"]
+
+[node name="Inventory" type="PanelContainer" unique_id=1302600145]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2

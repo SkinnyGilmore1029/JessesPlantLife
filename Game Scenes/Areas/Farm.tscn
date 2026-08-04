@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dpdsn0mkadryd"]
+
+[ext_resource type="Script" uid="uid://d3oyn58uaqqga" path="res://Game Scenes/AreaScripts/farm.gd" id="1_34seq"]
+[ext_resource type="PackedScene" uid="uid://cajbnosp1fbeq" path="res://Game Scenes/Land/FarmLand.tscn" id="1_ohc15"]
+[ext_resource type="PackedScene" uid="uid://daueqm5a3bv4n" path="res://The Plants/PlantScenes/StarterPlant.tscn" id="4_467cv"]
+
+[node name="TheFarm" type="Node2D" unique_id=673281839]
+script = ExtResource("1_34seq")
+
+[node name="FarmLand" parent="." unique_id=1790656199 instance=ExtResource("1_ohc15")]
+
+[node name="StarterPlant" parent="." unique_id=1591226720 instance=ExtResource("4_467cv")]
+position = Vector2(1162, 392)
