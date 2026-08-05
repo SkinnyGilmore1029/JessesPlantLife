@@ -5,6 +5,7 @@ extends Resource
 @export var age :int = 0
 @export var  time_until_watered :float = 0.0
 @export var last_watered :float = 0.0
+@export var touched :int
 
 func show_stats()->void:
 	print(plant_name)

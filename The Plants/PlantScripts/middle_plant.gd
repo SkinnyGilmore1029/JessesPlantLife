@@ -1,4 +1,4 @@
-extends Node
+extends StaticBody2D
 
 @export var plant_data: Plant_manager
 
