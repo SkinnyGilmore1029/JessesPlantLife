@@ -8,7 +8,7 @@
 script = ExtResource("3_ltw5m")
 Connection_name = &"Wilds1"
 send_to = "uid://blkfw7f5x6o21"
-spawn_at = Vector2(48, 1152)
+spawn_at = Vector2(48, 1052)
 metadata/_custom_type_script = "uid://d0oggue18tcym"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i2i81"]
