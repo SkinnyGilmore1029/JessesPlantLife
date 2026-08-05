@@ -18,5 +18,3 @@ func _on_body_entered(_body: Node2D) -> void:
 	GameState.hold_spawn_at = AreaData.spawn_at
 	GameState.current_scene = AreaData.Connection_name
 	get_tree().call_deferred("change_scene_to_file",AreaData.send_to)
-
-

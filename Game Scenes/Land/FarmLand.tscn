@@ -69,3 +69,4 @@ position = Vector2(2.25, 6)
 shape = SubResource("RectangleShape2D_tfj4v")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="body_shape_entered" from="ToWildArea1" to="ToWildArea1" method="_on_body_shape_entered"]
