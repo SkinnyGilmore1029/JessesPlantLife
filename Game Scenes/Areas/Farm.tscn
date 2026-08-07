@@ -4,15 +4,25 @@
 [ext_resource type="PackedScene" uid="uid://cajbnosp1fbeq" path="res://Game Scenes/Land/FarmLand.tscn" id="1_ohc15"]
 [ext_resource type="PackedScene" uid="uid://daueqm5a3bv4n" path="res://The Plants/PlantScenes/StarterPlant.tscn" id="4_467cv"]
 [ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="4_uttj0"]
+[ext_resource type="PackedScene" uid="uid://ch65vyr6ln1bs" path="res://The Plants/PlantScenes/Middle_plant.tscn" id="5_uttj0"]
 
 [sub_resource type="Resource" id="Resource_gml6c"]
 script = ExtResource("4_uttj0")
 plant_name = "Bob"
+food_needed = 3
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [sub_resource type="Resource" id="Resource_3o8bk"]
 script = ExtResource("4_uttj0")
+plant_name = "Jay"
+food_needed = 3
+metadata/_custom_type_script = "uid://d16hmprr7a2bu"
+
+[sub_resource type="Resource" id="Resource_uttj0"]
+script = ExtResource("4_uttj0")
 plant_name = "Josh"
+food_needed = 6
+hunger = 2
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [node name="TheFarm" type="Node2D" unique_id=673281839]
@@ -27,3 +37,7 @@ plant_data = SubResource("Resource_gml6c")
 [node name="Bob2" parent="." unique_id=1593192546 instance=ExtResource("4_467cv")]
 position = Vector2(441, 65)
 plant_data = SubResource("Resource_3o8bk")
+
+[node name="MiddlePlant" parent="." unique_id=95146304 instance=ExtResource("5_uttj0")]
+position = Vector2(836, 378)
+plant_data = SubResource("Resource_uttj0")

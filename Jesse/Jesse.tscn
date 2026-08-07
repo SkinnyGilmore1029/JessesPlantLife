@@ -5,9 +5,12 @@
 [ext_resource type="Script" uid="uid://u66avsyksvgp" path="res://Managers/Scripts/node_state_machine.gd" id="3_pfpo0"]
 [ext_resource type="Texture2D" uid="uid://l7ngwqu0vwfd" path="res://Assets/Pictures/People/Jesse.png" id="5_k20bo"]
 [ext_resource type="Script" uid="uid://c2i5s8iy6673d" path="res://Jesse/JesseScripts/Idle_state.gd" id="5_yaf2p"]
+[ext_resource type="PackedScene" uid="uid://dxeo72k7jka52" path="res://Components/ComponentScenes/FeedingComponent.tscn" id="6_k20bo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfj4v"]
 size = Vector2(7.5, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_guak4"]
 
 [node name="Jesse" type="CharacterBody2D" unique_id=1022458752 groups=["Player"]]
 script = ExtResource("1_7lwai")
@@ -26,6 +29,13 @@ editor_draw_limits = true
 position = Vector2(-2, 3)
 shape = SubResource("RectangleShape2D_tfj4v")
 debug_color = Color(0, 1, 0, 0.3019608)
+
+[node name="FeedingCompont" parent="." unique_id=168689287 instance=ExtResource("6_k20bo")]
+
+[node name="FeedingCollison" type="CollisionShape2D" parent="FeedingCompont" unique_id=1257660604]
+position = Vector2(-1, 7)
+shape = SubResource("CircleShape2D_guak4")
+debug_color = Color(0.9372549, 0.8392157, 0, 0.28627452)
 
 [node name="StateMachine" type="Node" parent="." unique_id=808417085 node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("3_pfpo0")
