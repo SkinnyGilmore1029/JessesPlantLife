@@ -5,8 +5,7 @@ signal move_ControllerBox_up
 signal move_ControllerBox_down
 signal option_picked
 
-@warning_ignore("unused_parameter")
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	match GameState.current_scene:
 		"Title":
 			if Input.is_action_just_pressed("move_up"):

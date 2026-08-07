@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://behoonthymn2y"]
+
+[ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="1_qbt82"]
+
+[node name="PlantData" type="Node2D" unique_id=538862366]
+script = ExtResource("1_qbt82")
