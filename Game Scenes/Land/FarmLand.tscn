@@ -4,8 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cervuqnjy4wgt" path="res://Assets/Pictures/Backgrounds/punyworld-overworld-tileset.png" id="1_s2xxa"]
 [ext_resource type="PackedScene" uid="uid://im0lv2lkj3i1" path="res://Components/ComponentScenes/AreaConnecter.tscn" id="2_vxvby"]
 [ext_resource type="Script" uid="uid://d0oggue18tcym" path="res://Managers/SystemManagers/Connector_Manager.gd" id="3_ltw5m"]
-[ext_resource type="PackedScene" uid="uid://daueqm5a3bv4n" path="res://The Plants/PlantScenes/StarterPlant.tscn" id="4_46ypr"]
-[ext_resource type="Script" uid="uid://1tnvakcbm3w3" path="res://Managers/SystemManagers/Plant_Manager.gd" id="5_s2xxa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2oyr"]
 resource_name = "Town Stuff"
@@ -1005,19 +1003,6 @@ metadata/_custom_type_script = "uid://d0oggue18tcym"
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfj4v"]
 size = Vector2(89.5, 22)
 
-[sub_resource type="Resource" id="Resource_f2oyr"]
-script = ExtResource("5_s2xxa")
-plant_name = "Bob"
-metadata/_custom_type_script = "uid://1tnvakcbm3w3"
-
-[sub_resource type="Resource" id="Resource_s2xxa"]
-script = ExtResource("5_s2xxa")
-plant_name = "George"
-age = 1
-time_until_watered = 1.0
-last_watered = 1.0
-metadata/_custom_type_script = "uid://1tnvakcbm3w3"
-
 [node name="FarmLand" type="Node2D" unique_id=1790656199]
 
 [node name="Grass" type="TileMapLayer" parent="." unique_id=238036908]
@@ -1038,7 +1023,7 @@ tile_set = ExtResource("1_m5dxt")
 
 [node name="House" type="TileMapLayer" parent="." unique_id=1826598082]
 position = Vector2(8, 103)
-tile_map_data = PackedByteArray("AABKAA0AAgAAAAAAAAA=")
+tile_map_data = PackedByteArray("AABKAA0AAgAAAAAAAAAeAP//AAARACIAAAAfAP//AAARACIAAAAgAP//AAARACIAAAA=")
 tile_set = ExtResource("1_m5dxt")
 
 [node name="Cliffs" type="TileMapLayer" parent="." unique_id=285623488]
@@ -1061,13 +1046,5 @@ AreaData = SubResource("Resource_46ypr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ToTown" unique_id=950182528]
 position = Vector2(2.25, 6)
 shape = SubResource("RectangleShape2D_tfj4v")
-
-[node name="StarterPlant" parent="." unique_id=1890363192 instance=ExtResource("4_46ypr")]
-position = Vector2(530, -117)
-plant_data = SubResource("Resource_f2oyr")
-
-[node name="StarterPlant2" parent="." unique_id=1744347506 instance=ExtResource("4_46ypr")]
-position = Vector2(152, -98)
-plant_data = SubResource("Resource_s2xxa")
 
 [connection signal="ready" from="." to="." method="_on_ready"]

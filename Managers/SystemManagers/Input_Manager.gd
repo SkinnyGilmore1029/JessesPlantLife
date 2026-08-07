@@ -15,8 +15,7 @@ func _process(delta: float) -> void:
 				move_ControllerBox_down.emit()
 			if Input.is_action_just_pressed("action"):
 				option_picked.emit()
-	
-		
+
 
 
 #made a vector to help move

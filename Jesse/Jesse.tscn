@@ -39,4 +39,6 @@ jesse = NodePath("../..")
 script = ExtResource("3_nmhgq")
 jesse = NodePath("../..")
 
+[node name="Node" type="Node" parent="." unique_id=27208973]
+
 [connection signal="ready" from="." to="." method="_on_ready"]

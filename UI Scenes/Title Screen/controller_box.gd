@@ -19,11 +19,11 @@ func move_box_up() -> void:
 		"New Game" :
 			current_option = "Options"
 			controller_box.position = options.position
-			
+
 		"Load Game" :
 			current_option = "New Game"
 			controller_box.position = new_game.position
-			
+
 		"Options" :
 			current_option = "Load Game"
 			controller_box.position = load_game.position
@@ -48,7 +48,7 @@ func option_selected()->void:
 		"New Game":
 			get_tree().change_scene_to_file("res://Game Scenes/Areas/Farm.tscn")
 			GameState.current_scene = "Playing"
-			print("current_scene")
+			print("current_scene", GameState.current_scene)
 
 		"Load Game":
 				print("not ready yet")
