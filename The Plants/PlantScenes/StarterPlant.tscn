@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://coknafym5vnpx" path="res://The Plants/PlantScripts/starter_plant.gd" id="1_yisrb"]
 [ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="2_6cxf8"]
 [ext_resource type="Texture2D" uid="uid://e0njwrrbwcdc" path="res://Assets/Pictures/Plants/Dancing_Flower.png" id="3_yisrb"]
-[ext_resource type="PackedScene" uid="uid://bcblt421q0nxy" path="res://Components/ComponentScenes/GettingWateredComponent.tscn" id="4_6cxf8"]
 
 [sub_resource type="Resource" id="Resource_t6ax4"]
 script = ExtResource("2_6cxf8")
@@ -42,10 +41,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_tfj4v"]
 radius = 4.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pvr44"]
-radius = 4.1231055
-
-[node name="Bob" type="StaticBody2D" unique_id=697831728]
+[node name="StarterPlants" type="StaticBody2D" unique_id=697831728]
 script = ExtResource("1_yisrb")
 plant_data = SubResource("Resource_t6ax4")
 
@@ -58,10 +54,3 @@ frame_progress = 0.51004374
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1174646931]
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_tfj4v")
-
-[node name="WateredComponent" parent="." unique_id=1690780937 instance=ExtResource("4_6cxf8")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WateredComponent" unique_id=1389774414]
-position = Vector2(-1, 13)
-shape = SubResource("CircleShape2D_pvr44")
-debug_color = Color(0.093333244, 0, 0.7, 0.30980393)

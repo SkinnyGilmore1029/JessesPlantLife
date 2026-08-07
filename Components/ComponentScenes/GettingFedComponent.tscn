@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bcblt421q0nxy"]
+
+[ext_resource type="Script" uid="uid://di3ai3vg6om3v" path="res://Components/ComponentScripts/getting_fed_component.gd" id="1_7xrdx"]
+
+[node name="GettingFedComponent" type="Area2D" unique_id=410606877]
+script = ExtResource("1_7xrdx")
+metadata/_custom_type_script = "uid://di3ai3vg6om3v"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

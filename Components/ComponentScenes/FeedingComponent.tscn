@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dxeo72k7jka52"]
+
+[ext_resource type="Script" uid="uid://dp4udsd636ns4" path="res://Components/ComponentScripts/FeedingComponent.gd" id="1_abkok"]
+
+[node name="FeedingCompont" type="Area2D" unique_id=168689287]
+script = ExtResource("1_abkok")
+metadata/_custom_type_script = "uid://dp4udsd636ns4"

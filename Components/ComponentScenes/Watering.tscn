@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://dxeo72k7jka52"]
-
-[ext_resource type="Script" uid="uid://dwhj8xso4qxsf" path="res://Components/ComponentScripts/watering.gd" id="1_c47ro"]
-
-[node name="Watering" type="Area2D" unique_id=1494850030]
-script = ExtResource("1_c47ro")
