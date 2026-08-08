@@ -4,13 +4,10 @@ extends StaticBody2D
 
 
 func _ready() -> void:
-	#plant_data.change_age.connect(change_plant_age)
 	plant_data.change_hunger.connect(change_hunger_state)
 	plant_data.change_mood.connect(change_plant_mood)
+	plant_data.take_food_consumed.connect(take_food_consumed)
 
-
-func change_plant_age() -> void:
-	pass
 
 func change_plant_mood() -> void:
 	match plant_data.hunger:
@@ -39,3 +36,7 @@ func change_hunger_state() -> void:
 	else:
 		plant_data.hunger = Plant_manager.PlantHunger.FULL
 	plant_data.change_mood.emit()
+
+func take_food_consumed() -> void:
+	plant_data.food_consumed -=1
+	plant_data.change_hunger.emit()

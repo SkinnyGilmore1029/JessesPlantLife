@@ -31,6 +31,7 @@ shape = SubResource("RectangleShape2D_tfj4v")
 debug_color = Color(0, 1, 0, 0.3019608)
 
 [node name="FeedingCompont" parent="." unique_id=168689287 instance=ExtResource("6_k20bo")]
+feed_amount_added = 10
 
 [node name="FeedingCollison" type="CollisionShape2D" parent="FeedingCompont" unique_id=1257660604]
 position = Vector2(-1, 7)

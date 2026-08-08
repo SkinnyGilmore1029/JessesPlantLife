@@ -9,19 +9,25 @@
 [sub_resource type="Resource" id="Resource_gml6c"]
 script = ExtResource("4_uttj0")
 plant_name = "Bob"
-food_needed = 3
+food_needed = 120
+food_consumed = 120
+time_until_hungry = 90.0
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [sub_resource type="Resource" id="Resource_3o8bk"]
 script = ExtResource("4_uttj0")
 plant_name = "Jay"
-food_needed = 3
+food_needed = 120
+food_consumed = 120
+time_until_hungry = 95.0
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [sub_resource type="Resource" id="Resource_uttj0"]
 script = ExtResource("4_uttj0")
 plant_name = "Josh"
-food_needed = 6
+food_needed = 150
+food_consumed = 150
+time_until_hungry = 120.0
 hunger = 2
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
@@ -30,11 +36,11 @@ script = ExtResource("1_34seq")
 
 [node name="FarmLand" parent="." unique_id=1790656199 instance=ExtResource("1_ohc15")]
 
-[node name="Bob" parent="." unique_id=697831728 instance=ExtResource("4_467cv")]
+[node name="StarterPlant" parent="." unique_id=697831728 instance=ExtResource("4_467cv")]
 position = Vector2(551, 61)
 plant_data = SubResource("Resource_gml6c")
 
-[node name="Bob2" parent="." unique_id=1593192546 instance=ExtResource("4_467cv")]
+[node name="StarterPlant2" parent="." unique_id=1593192546 instance=ExtResource("4_467cv")]
 position = Vector2(441, 65)
 plant_data = SubResource("Resource_3o8bk")
 
