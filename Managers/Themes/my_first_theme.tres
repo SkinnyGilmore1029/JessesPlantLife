@@ -1,0 +1,45 @@
+[gd_resource type="Theme" format=3 uid="uid://d3mb6762ofrwc"]
+
+[ext_resource type="FontFile" uid="uid://mstasklrvpwi" path="res://Assets/fonts/pixelFont-7-8x14-sproutLands.ttf" id="1_lr0gh"]
+[ext_resource type="Texture2D" uid="uid://bub64cgmg4bby" path="res://Assets/Pictures/UI Themes/UI Big Play Button.png" id="2_ndt6h"]
+[ext_resource type="Texture2D" uid="uid://dcfjrnt0743si" path="res://Assets/Pictures/UI Themes/Sprite sheet for Basic Pack.png" id="3_e3ddx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3ddx"]
+bg_color = Color(0.14509805, 0.72156864, 0, 0.74509805)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xb7yg"]
+bg_color = Color(0.14509805, 0.72156864, 0, 0.74509805)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+corner_detail = 6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dmw67"]
+texture = ExtResource("2_ndt6h")
+region_rect = Rect2(3, 2, 90, 27)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fwmn5"]
+texture = ExtResource("3_e3ddx")
+texture_margin_left = 7.0
+texture_margin_top = 5.0
+texture_margin_right = 7.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(201, 59, 30, 26)
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/constants/line_spacing = 0
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_lr0gh")
+Button/styles/focus = SubResource("StyleBoxFlat_e3ddx")
+Button/styles/hover = SubResource("StyleBoxFlat_xb7yg")
+Button/styles/normal = SubResource("StyleBoxTexture_dmw67")
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_lr0gh")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_fwmn5")

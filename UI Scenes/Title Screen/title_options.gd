@@ -1,14 +1,20 @@
 extends Control
 
-func _on_new_game_pressed() -> void:
+func _ready() -> void:
+	%NewGameButton.grab_focus()
+
+
+func new_game_pressed() -> void:
 	GameState.current_scene = "New Game"
-	print(GameState.current_scene, " From Title ? Yep from vscode")
 	get_tree().change_scene_to_file("res://Game Scenes/Areas/Farm.tscn")
 
 
-func _on_load_game_pressed() -> void:
-	pass # Replace with function body.
+
+func load_game_pressed() -> void:
+	print("Load Game Pressed")
 
 
-func _on_options_pressed() -> void:
-	pass # Replace with function body.
+
+
+func Settings_pressed() -> void:
+	print("Settings Pressed")

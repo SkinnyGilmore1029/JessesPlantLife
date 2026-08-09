@@ -1,37 +1,27 @@
 class_name GameInputEvents
 extends Node
 
-signal move_ControllerBox_up
-signal move_ControllerBox_down
-signal option_picked
 
-func _process(_delta: float) -> void:
-	match GameState.current_scene:
-		"Title":
-			if Input.is_action_just_pressed("move_up"):
-				move_ControllerBox_up.emit()
-			if Input.is_action_just_pressed("move_down"):
-				move_ControllerBox_down.emit()
-			if Input.is_action_just_pressed("action"):
-				option_picked.emit()
-
-
-
-#made a vector to help move
+# Made a vector to help move
 static var direction: Vector2
 
+
 static func movement_input() -> Vector2:
+	direction = Vector2.ZERO
+
 	if Input.is_action_pressed("move_left"):
-		direction = Vector2.LEFT
-	elif Input.is_action_pressed("move_right"):
-		direction = Vector2.RIGHT
-	elif Input.is_action_pressed("move_up"):
-		direction = Vector2.UP
-	elif Input.is_action_pressed("move_down"):
-		direction = Vector2.DOWN
-	else:
-		direction = Vector2.ZERO
-	return direction
+		direction.x -= 1
+
+	if Input.is_action_pressed("move_right"):
+		direction.x += 1
+
+	if Input.is_action_pressed("move_up"):
+		direction.y -= 1
+
+	if Input.is_action_pressed("move_down"):
+		direction.y += 1
+
+	return direction.normalized()
 
 
 static func is_movement_input() -> bool:
