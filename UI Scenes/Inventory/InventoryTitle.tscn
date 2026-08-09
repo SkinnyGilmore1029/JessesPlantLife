@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://gm3j1cssbjc3"]
+
+[ext_resource type="LabelSettings" uid="uid://c6h87ahbyms35" path="res://Managers/Themes/Jesse_pink.tres" id="1_y3lvq"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_830d4"]
+color = Color(0.90588236, 0.6039216, 0.7372549, 1)
+grow_begin = -82.0
+grow_end = -84.0
+thickness = 10
+
+[node name="InventoryTitle" type="PanelContainer" unique_id=803450014]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -83.0
+offset_right = 83.0
+offset_bottom = 31.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=279011058]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1863178634]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1541688765]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Seed Satchel"
+label_settings = ExtResource("1_y3lvq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1930338935]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2" unique_id=509044621]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_830d4")

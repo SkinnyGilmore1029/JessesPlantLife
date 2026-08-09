@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://c2juw2hxqun8o"]
+
+[ext_resource type="Texture2D" uid="uid://c7d2prhtkwqjp" path="res://Assets/Pictures/Plants/Starting_seed.png" id="1_73o0e"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_2otri"]
+color = Color(1, 1, 1, 1)
+grow_begin = -4.0
+grow_end = -5.0
+thickness = 5
+
+[node name="FruitSection" type="PanelContainer" unique_id=1302600145]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -80.0
+offset_right = 173.0
+offset_bottom = 80.0
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2141942366]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1615042772]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=1506473011]
+layout_mode = 2
+text = "Fruit Section"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=545006189]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_2otri")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1413189705]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer" unique_id=1430813674]
+layout_mode = 2
+theme_override_constants/h_separation = 17
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="Fruit1NameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=426197015]
+layout_mode = 2
+text = "Fruit 1"
+
+[node name="Fruit1Texture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=642727263]
+layout_mode = 2
+texture = ExtResource("1_73o0e")
+
+[node name="Fruit1CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=316569683]
+layout_mode = 2
+text = "0"
+
+[node name="Fruit2NameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=679830729]
+layout_mode = 2
+text = "Fruit 2"
+
+[node name="Fruit2Texture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=436662902]
+layout_mode = 2
+texture = ExtResource("1_73o0e")
+
+[node name="Fruit2CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1597573792]
+layout_mode = 2
+text = "0"
+
+[node name="Fruit3NameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1687724709]
+layout_mode = 2
+text = "Fruit 3"
+
+[node name="Fruit3Texture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=800578429]
+layout_mode = 2
+texture = ExtResource("1_73o0e")
+
+[node name="Fruit3CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1613862433]
+layout_mode = 2
+text = "0"
+
+[node name="Fruit4NameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1305451638]
+layout_mode = 2
+text = "Fruit 4"
+
+[node name="Fruit4Texture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1015350528]
+layout_mode = 2
+texture = ExtResource("1_73o0e")
+
+[node name="Fruit4CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1457017988]
+layout_mode = 2
+text = "0"

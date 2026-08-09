@@ -2,6 +2,12 @@
 
 [ext_resource type="FontFile" uid="uid://clu5ewgm7sxf7" path="res://Assets/fonts/PeaberryBase.ttf" id="1_k33os"]
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_830d4"]
+color = Color(0.90588236, 0.6039216, 0.7372549, 1)
+grow_begin = -55.0
+grow_end = -49.0
+thickness = 7
+
 [node name="Title" type="Control" unique_id=273594996]
 layout_mode = 3
 anchors_preset = 5
@@ -21,17 +27,27 @@ offset_right = 122.0
 offset_bottom = 34.0
 grow_horizontal = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=808904563]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1681850962]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=808904563]
 layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer" unique_id=1275740954]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1275740954]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.90673286, 0.6020455, 0.73829985, 1)
+theme_override_colors/font_color = Color(0.90588236, 0.6039216, 0.7372549, 1)
 theme_override_colors/font_shadow_color = Color(0.96499723, 0.99999994, 0.9510761, 0.9137255)
-theme_override_colors/font_outline_color = Color(0.38351843, 0.43740684, 0.04059854, 1)
 theme_override_fonts/font = ExtResource("1_k33os")
 theme_override_font_sizes/font_size = 27
 text = "Jesse Plant Life"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1951459416]
+layout_mode = 2
+theme_override_constants/margin_bottom = 5
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer/MarginContainer2" unique_id=73435500]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_830d4")
