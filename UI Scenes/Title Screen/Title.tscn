@@ -8,34 +8,26 @@ grow_begin = -55.0
 grow_end = -49.0
 thickness = 7
 
-[node name="Title" type="Control" unique_id=273594996]
-layout_mode = 3
+[node name="Title" type="PanelContainer" unique_id=1440009055]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
+offset_left = -196.5
+offset_right = 196.5
+offset_bottom = 61.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1332852390]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -122.0
-offset_right = 122.0
-offset_bottom = 34.0
-grow_horizontal = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1681850962]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1681850962]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=808904563]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=808904563]
 layout_mode = 2
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1275740954]
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1275740954]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.90588236, 0.6039216, 0.7372549, 1)
@@ -44,10 +36,10 @@ theme_override_fonts/font = ExtResource("1_k33os")
 theme_override_font_sizes/font_size = 27
 text = "Jesse Plant Life"
 
-[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1951459416]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1951459416]
 layout_mode = 2
 theme_override_constants/margin_bottom = 5
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/VBoxContainer/MarginContainer2" unique_id=73435500]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2" unique_id=73435500]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxLine_830d4")

@@ -8,7 +8,7 @@ grow_begin = -82.0
 grow_end = -84.0
 thickness = 10
 
-[node name="InventoryTitle" type="PanelContainer" unique_id=803450014]
+[node name="SeedSatchelTitle" type="PanelContainer" unique_id=803450014]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

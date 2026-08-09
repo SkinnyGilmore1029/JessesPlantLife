@@ -3,6 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://bbbrmo2vpga4s" path="res://UI Scenes/Title Screen/Title.tscn" id="1_d5o75"]
 [ext_resource type="Texture2D" uid="uid://c7d2prhtkwqjp" path="res://Assets/Pictures/Plants/Starting_seed.png" id="1_gk3e6"]
 [ext_resource type="PackedScene" uid="uid://dhspdtu4ym1ae" path="res://UI Scenes/Title Screen/New_options.tscn" id="1_wi1nd"]
+[ext_resource type="Texture2D" uid="uid://co1kpd4aotkmh" path="res://Assets/Pictures/Plants/JessePlant pumpkin2.png" id="4_3p37g"]
+[ext_resource type="Texture2D" uid="uid://cm52cfe13flba" path="res://Assets/Pictures/Plants/JessePlant 7.png" id="5_bh3r6"]
+[ext_resource type="Texture2D" uid="uid://dsyfr2qb2v347" path="res://Assets/Pictures/Plants/JessePlant sprout2.png" id="6_ls6w6"]
+[ext_resource type="Texture2D" uid="uid://bn1me8uy8r1lb" path="res://Assets/Pictures/Plants/JessePlant berry vine2.png" id="7_ft6jn"]
+[ext_resource type="Texture2D" uid="uid://cska1myn6vygk" path="res://Assets/Pictures/Plants/JessePlant purple flower2.png" id="8_0vrqo"]
+[ext_resource type="Texture2D" uid="uid://l7ngwqu0vwfd" path="res://Assets/Pictures/People/Jesse.png" id="9_n7qwp"]
+[ext_resource type="Texture2D" uid="uid://bifqg8lars873" path="res://Assets/Pictures/People/Josh1.png" id="10_mvwoj"]
 
 [node name="title_screen" type="Control" unique_id=2112494425]
 layout_mode = 3
@@ -43,3 +50,141 @@ offset_top = 271.0
 offset_right = 631.0
 offset_bottom = 348.0
 texture = ExtResource("1_gk3e6")
+stretch_mode = 5
+
+[node name="Pumpkin" type="TextureRect" parent="." unique_id=77022587]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 307.0
+offset_right = 531.0
+offset_bottom = 384.0
+texture = ExtResource("4_3p37g")
+stretch_mode = 5
+
+[node name="PinkFlower" type="TextureRect" parent="." unique_id=1981594812]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 274.0
+offset_right = 202.0
+offset_bottom = 351.0
+texture = ExtResource("5_bh3r6")
+stretch_mode = 5
+
+[node name="Sprout" type="TextureRect" parent="." unique_id=1488916059]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 205.0
+offset_right = 91.0
+offset_bottom = 282.0
+texture = ExtResource("6_ls6w6")
+stretch_mode = 4
+
+[node name="Sprout2" type="TextureRect" parent="." unique_id=1231804432]
+layout_mode = 0
+offset_left = 554.0
+offset_top = 196.0
+offset_right = 633.0
+offset_bottom = 273.0
+texture = ExtResource("6_ls6w6")
+stretch_mode = 5
+
+[node name="Vine" type="TextureRect" parent="." unique_id=1888488995]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 30.0
+offset_right = 178.0
+offset_bottom = 107.0
+texture = ExtResource("7_ft6jn")
+stretch_mode = 5
+
+[node name="Vine2" type="TextureRect" parent="." unique_id=1931879102]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 30.0
+offset_right = 234.0
+offset_bottom = 107.0
+texture = ExtResource("7_ft6jn")
+stretch_mode = 5
+flip_h = true
+
+[node name="Vine3" type="TextureRect" parent="." unique_id=592341262]
+layout_mode = 0
+offset_left = 220.0
+offset_top = 33.0
+offset_right = 299.0
+offset_bottom = 110.0
+texture = ExtResource("7_ft6jn")
+stretch_mode = 5
+
+[node name="Vine4" type="TextureRect" parent="." unique_id=1304423141]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 30.0
+offset_right = 367.0
+offset_bottom = 107.0
+texture = ExtResource("7_ft6jn")
+stretch_mode = 5
+flip_h = true
+
+[node name="Vine5" type="TextureRect" parent="." unique_id=935637827]
+layout_mode = 0
+offset_left = 367.0
+offset_top = 33.0
+offset_right = 446.0
+offset_bottom = 110.0
+texture = ExtResource("7_ft6jn")
+stretch_mode = 5
+
+[node name="Vine6" type="TextureRect" parent="." unique_id=324875641]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 32.0
+offset_right = 533.0
+offset_bottom = 109.0
+texture = ExtResource("7_ft6jn")
+stretch_mode = 5
+
+[node name="Vine7" type="TextureRect" parent="." unique_id=148068989]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 210.0
+offset_right = 454.0
+offset_bottom = 287.0
+texture = ExtResource("7_ft6jn")
+stretch_mode = 5
+
+[node name="Vine8" type="TextureRect" parent="." unique_id=1315731806]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 209.0
+offset_right = 268.0
+offset_bottom = 286.0
+texture = ExtResource("7_ft6jn")
+stretch_mode = 5
+
+[node name="PurpleFlower" type="TextureRect" parent="." unique_id=1629378412]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 207.0
+offset_right = 364.0
+offset_bottom = 284.0
+texture = ExtResource("8_0vrqo")
+stretch_mode = 5
+
+[node name="Jesse" type="TextureRect" parent="." unique_id=1185693713]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 105.0
+offset_right = 96.0
+offset_bottom = 182.0
+texture = ExtResource("9_n7qwp")
+stretch_mode = 5
+
+[node name="Josh" type="TextureRect" parent="." unique_id=9198104]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 104.0
+offset_right = 626.0
+offset_bottom = 181.0
+texture = ExtResource("10_mvwoj")
+stretch_mode = 5

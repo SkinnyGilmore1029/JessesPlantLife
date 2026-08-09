@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://b5w65ae7wi8ih"]
+
+[ext_resource type="Texture2D" uid="uid://bn1me8uy8r1lb" path="res://Assets/Pictures/Plants/JessePlant berry vine2.png" id="1_iht5u"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_830d4"]
+thickness = 9
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mctfd"]
+load_path = "res://.godot/imported/JessePlant pumpkin2.png-6ffb11837fd0aad23e405fd92938c21b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qkqnk"]
+load_path = "res://.godot/imported/JessePlant purple flower2.png-24bd5688206cb0249eb119f1bb3b74f9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o4q2t"]
+load_path = "res://.godot/imported/JessePlant 7.png-f82397608f2e8683c2f2f0dc98884db5.ctex"
+
+[node name="SeedSection" type="PanelContainer" unique_id=1296898747]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1403965819]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1054475328]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 15
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1698644254]
+layout_mode = 2
+text = "Seed Section"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1345358156]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_830d4")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=172565881]
+layout_mode = 2
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer2" unique_id=1652550332]
+layout_mode = 2
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 15
+columns = 3
+
+[node name="PumpkinName" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=401192600]
+layout_mode = 2
+text = "Pumpkins"
+vertical_alignment = 1
+
+[node name="PumpkinTexture" type="TextureRect" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=396713521]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_mctfd")
+stretch_mode = 5
+
+[node name="PumpkinCount" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1477401284]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PurpleFlowersName" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=501470776]
+layout_mode = 2
+text = "Purple-Flowers"
+vertical_alignment = 1
+
+[node name="PurpleFlowersTexture" type="TextureRect" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1292383534]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_qkqnk")
+stretch_mode = 5
+
+[node name="PurpleFlowersCount" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=864021139]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PinkFlowerName" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1256688697]
+layout_mode = 2
+text = "Pink-Flowers"
+vertical_alignment = 1
+
+[node name="PinkFlowersTexture" type="TextureRect" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=126339316]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_o4q2t")
+stretch_mode = 5
+
+[node name="PinkFlowersCount" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1531099070]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VinePlantName" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=798371714]
+layout_mode = 2
+text = "Vines"
+vertical_alignment = 1
+
+[node name="VinePlantTexture" type="TextureRect" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1869303621]
+layout_mode = 2
+texture = ExtResource("1_iht5u")
+stretch_mode = 5
+
+[node name="VinePlantCount" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=2063599140]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1

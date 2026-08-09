@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bdr2wh8yai0l4"]
+
+[ext_resource type="PackedScene" uid="uid://gm3j1cssbjc3" path="res://UI Scenes/Inventory/SeedSatchelTitle.tscn" id="1_kjtaa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guak4"]
+bg_color = Color(0.33, 0.22550002, 0, 1)
+
+[sub_resource type="Theme" id="Theme_830d4"]
+Panel/styles/panel = SubResource("StyleBoxFlat_guak4")
+
+[node name="MainSeedSatchel" type="Panel" unique_id=1674651397]
+offset_right = 638.0
+offset_bottom = 361.0
+theme = SubResource("Theme_830d4")
+
+[node name="SeedSatchelTitle" parent="." unique_id=803450014 instance=ExtResource("1_kjtaa")]
+layout_mode = 1
+offset_left = -106.0
+offset_right = 100.0
+offset_bottom = 69.0
