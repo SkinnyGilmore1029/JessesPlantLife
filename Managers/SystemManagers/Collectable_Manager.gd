@@ -1,5 +1,7 @@
 class_name Collectables
 extends Resource
 
-var item_name: String
-var picture: Texture2D
+@export var item_name :String
+@export var item_count :int = 0
+
+

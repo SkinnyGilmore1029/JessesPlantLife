@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://daueqm5a3bv4n" path="res://The Plants/PlantScenes/StarterPlant.tscn" id="4_467cv"]
 [ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="4_uttj0"]
 [ext_resource type="PackedScene" uid="uid://ch65vyr6ln1bs" path="res://The Plants/PlantScenes/Middle_plant.tscn" id="5_uttj0"]
+[ext_resource type="PackedScene" uid="uid://b5w65ae7wi8ih" path="res://UI Scenes/Inventory/SeedSection.tscn" id="6_3o8bk"]
+[ext_resource type="PackedScene" uid="uid://drrhktrpanuqx" path="res://The Plants/PlantScenes/Pumkin.tscn" id="7_3nt1h"]
+[ext_resource type="PackedScene" uid="uid://dnie8im41udp7" path="res://Jesse/Jesse.tscn" id="8_3nt1h"]
 
 [sub_resource type="Resource" id="Resource_gml6c"]
 script = ExtResource("4_uttj0")
@@ -47,3 +50,16 @@ plant_data = SubResource("Resource_3o8bk")
 [node name="MiddlePlant" parent="." unique_id=95146304 instance=ExtResource("5_uttj0")]
 position = Vector2(836, 378)
 plant_data = SubResource("Resource_uttj0")
+
+[node name="Pumkin" parent="." unique_id=1919133114 instance=ExtResource("7_3nt1h")]
+position = Vector2(448, 214)
+
+[node name="Pumkin2" parent="." unique_id=2025996071 instance=ExtResource("7_3nt1h")]
+position = Vector2(473, 293)
+
+[node name="Pumkin3" parent="." unique_id=1080967605 instance=ExtResource("7_3nt1h")]
+position = Vector2(548, 252)
+
+[node name="SeedSection" parent="." unique_id=1296898747 instance=ExtResource("6_3o8bk")]
+
+[node name="Jesse" parent="." unique_id=1022458752 instance=ExtResource("8_3nt1h")]

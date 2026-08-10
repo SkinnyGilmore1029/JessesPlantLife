@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdr2wh8yai0l4"]
 
 [ext_resource type="PackedScene" uid="uid://gm3j1cssbjc3" path="res://UI Scenes/Inventory/SeedSatchelTitle.tscn" id="1_kjtaa"]
+[ext_resource type="PackedScene" uid="uid://b5w65ae7wi8ih" path="res://UI Scenes/Inventory/SeedSection.tscn" id="2_l6t1o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guak4"]
 bg_color = Color(0.33, 0.22550002, 0, 1)
@@ -18,3 +19,10 @@ layout_mode = 1
 offset_left = -106.0
 offset_right = 100.0
 offset_bottom = 69.0
+
+[node name="SeedSection" parent="." unique_id=1296898747 instance=ExtResource("2_l6t1o")]
+layout_mode = 1
+offset_left = 155.0
+offset_top = 83.0
+offset_right = 478.0
+offset_bottom = 331.0

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Collectables" format=3 uid="uid://cvn7fh4rvattn"]
+
+[ext_resource type="Script" uid="uid://c3qa683cxjpsp" path="res://Managers/SystemManagers/Collectable_Manager.gd" id="1_hn0g6"]
+
+[resource]
+script = ExtResource("1_hn0g6")
+metadata/_custom_type_script = "uid://c3qa683cxjpsp"

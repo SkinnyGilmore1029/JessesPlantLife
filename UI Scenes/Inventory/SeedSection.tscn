@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5w65ae7wi8ih"]
 
 [ext_resource type="Texture2D" uid="uid://bn1me8uy8r1lb" path="res://Assets/Pictures/Plants/JessePlant berry vine2.png" id="1_iht5u"]
+[ext_resource type="Script" uid="uid://dpbagbqr3bkoe" path="res://UI Scenes/InventoryScripts/seed_section.gd" id="1_mctfd"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_830d4"]
 thickness = 9
@@ -15,6 +16,7 @@ load_path = "res://.godot/imported/JessePlant purple flower2.png-24bd5688206cb02
 load_path = "res://.godot/imported/JessePlant 7.png-f82397608f2e8683c2f2f0dc98884db5.ctex"
 
 [node name="SeedSection" type="PanelContainer" unique_id=1296898747]
+script = ExtResource("1_mctfd")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1403965819]
 layout_mode = 2
@@ -58,6 +60,7 @@ texture = SubResource("CompressedTexture2D_mctfd")
 stretch_mode = 5
 
 [node name="PumpkinCount" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1477401284]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 horizontal_alignment = 2
@@ -74,12 +77,13 @@ texture = SubResource("CompressedTexture2D_qkqnk")
 stretch_mode = 5
 
 [node name="PurpleFlowersCount" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=864021139]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="PinkFlowerName" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1256688697]
+[node name="PinkFlowersName" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1256688697]
 layout_mode = 2
 text = "Pink-Flowers"
 vertical_alignment = 1
@@ -90,6 +94,7 @@ texture = SubResource("CompressedTexture2D_o4q2t")
 stretch_mode = 5
 
 [node name="PinkFlowersCount" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=1531099070]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 horizontal_alignment = 2
@@ -106,6 +111,7 @@ texture = ExtResource("1_iht5u")
 stretch_mode = 5
 
 [node name="VinePlantCount" type="Label" parent="VBoxContainer/MarginContainer2/GridContainer" unique_id=2063599140]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 horizontal_alignment = 2

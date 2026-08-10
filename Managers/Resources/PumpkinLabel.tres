@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Collectables" format=3 uid="uid://bx0742rd3a03o"]
+
+[ext_resource type="Script" uid="uid://c3qa683cxjpsp" path="res://Managers/SystemManagers/Collectable_Manager.gd" id="1_yp13w"]
+
+[resource]
+script = ExtResource("1_yp13w")
+item_name = "Pumpkin"
+metadata/_custom_type_script = "uid://c3qa683cxjpsp"
