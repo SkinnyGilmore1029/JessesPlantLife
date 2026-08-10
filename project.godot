@@ -21,6 +21,8 @@ GameState="*uid://dojb4xeucoyts"
 AreaManager="*uid://cwm4ic0y3kdim"
 InputManager="*uid://xnypvbmd2tu1"
 SpawnManager="*uid://doe556g0kmr0"
+SignalHub="*uid://573rn8nkd6gw"
+PlayerUi="*uid://clee8bgopstj3"
 
 [display]
 

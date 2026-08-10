@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://clee8bgopstj3"]
+
+[ext_resource type="Script" uid="uid://butywno0p0w43" path="res://UI Scenes/Inventory/player_ui.gd" id="1_d6aph"]
+[ext_resource type="Texture2D" uid="uid://co1kpd4aotkmh" path="res://Assets/Pictures/Plants/JessePlant pumpkin2.png" id="1_nfal8"]
+[ext_resource type="Texture2D" uid="uid://cska1myn6vygk" path="res://Assets/Pictures/Plants/JessePlant purple flower2.png" id="2_d6aph"]
+[ext_resource type="Texture2D" uid="uid://cm52cfe13flba" path="res://Assets/Pictures/Plants/JessePlant 7.png" id="3_3a0ed"]
+[ext_resource type="Texture2D" uid="uid://bn1me8uy8r1lb" path="res://Assets/Pictures/Plants/JessePlant berry vine2.png" id="4_eiohl"]
+
+[node name="PlayerUi" type="CanvasLayer" unique_id=2098691322]
+script = ExtResource("1_d6aph")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1286799381]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -321.0
+offset_top = -45.0
+offset_right = -102.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=98683513]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="SeedSection" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2068331822]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="PumpkinTexture" type="TextureRect" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1826390053]
+layout_mode = 2
+texture = ExtResource("1_nfal8")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="PumpkinUICount" type="Label" parent="PanelContainer/MarginContainer/SeedSection" unique_id=893438643]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="PurpleTexture" type="TextureRect" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1651045226]
+layout_mode = 2
+texture = ExtResource("2_d6aph")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="PurpleUICount" type="Label" parent="PanelContainer/MarginContainer/SeedSection" unique_id=801159479]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="PinkTexture" type="TextureRect" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1361327059]
+layout_mode = 2
+texture = ExtResource("3_3a0ed")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="PinkUICount" type="Label" parent="PanelContainer/MarginContainer/SeedSection" unique_id=533816803]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="VineTexture" type="TextureRect" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1003026924]
+layout_mode = 2
+texture = ExtResource("4_eiohl")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="VineUICount" type="Label" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1065776805]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"

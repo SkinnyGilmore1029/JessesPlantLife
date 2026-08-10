@@ -21,3 +21,4 @@ func spawn_jesse(parent: Node) -> void:
 		parent.add_child(jesse)
 
 	GameState.player_spawned = true
+	PlayerUi.visible = true
