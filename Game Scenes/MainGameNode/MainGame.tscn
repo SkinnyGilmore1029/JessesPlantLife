@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dpdsn0mkadryd" path="res://Game Scenes/Areas/Farm.tscn" id="1_1iw7i"]
 [ext_resource type="PackedScene" uid="uid://dnie8im41udp7" path="res://Jesse/Jesse.tscn" id="1_4nvne"]
 [ext_resource type="PackedScene" uid="uid://clee8bgopstj3" path="res://UI/UI Scenes/Inventory/PlayerUi.tscn" id="3_jl57r"]
+[ext_resource type="PackedScene" uid="uid://bt3sewjubkpu0" path="res://UI/UI Scenes/PauseMenu/PauseHub.tscn" id="4_8qwid"]
+[ext_resource type="Script" uid="uid://b85gb17a08dmh" path="res://UI/UI Scripts/PauseScripts/pause_layer.gd" id="5_rfj5e"]
 
 [node name="MainGame" type="Node" unique_id=968453129]
 
@@ -15,3 +17,8 @@ unique_name_in_owner = true
 position = Vector2(276, 143)
 
 [node name="PlayerUi" parent="." unique_id=2098691322 instance=ExtResource("3_jl57r")]
+
+[node name="PauseHub" parent="." unique_id=1880171091 instance=ExtResource("4_8qwid")]
+script = ExtResource("5_rfj5e")
+
+[connection signal="visibility_changed" from="PauseHub" to="PauseHub" method="_on_visibility_changed"]

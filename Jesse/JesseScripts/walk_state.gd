@@ -10,13 +10,10 @@ func _on_process(_delta : float) -> void:
 
 func _on_physics_process(_delta : float) -> void:
 	var direction: Vector2 = GameInputEvents.movement_input()
-	
-	
+
 	jesse.velocity = direction * speed
 	jesse.move_and_slide()
-	
-	
-	
+
 	if direction != Vector2.ZERO:
 		jesse.current_direction = direction.normalized()
 

@@ -478,10 +478,6 @@ Menu={
 "script": null
 )]
 }
-move_Dleft={
-"deadzone": 0.2,
-"events": []
-}
 
 [layer_names]
 

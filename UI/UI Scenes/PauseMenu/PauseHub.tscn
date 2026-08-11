@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bt3sewjubkpu0"]
 
+[ext_resource type="Script" uid="uid://dbp4baq4dg8v7" path="res://UI/UI Scripts/PauseScripts/pause_hub.gd" id="1_5um00"]
 [ext_resource type="FontFile" uid="uid://clu5ewgm7sxf7" path="res://Assets/fonts/PeaberryBase.ttf" id="1_h48ew"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_830d4"]
@@ -11,50 +12,61 @@ content_margin_bottom = 33.0
 color = Color(1, 1, 1, 1)
 thickness = 10
 
-[node name="PauseHub" type="Control" unique_id=1615158562]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PauseHub" type="CanvasLayer" unique_id=1880171091]
+metadata/_edit_use_anchors_ = true
 
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=68249282]
+[node name="Control" type="Control" parent="." unique_id=710428598]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 147.0
+offset_top = 56.0
+offset_right = 187.0
+offset_bottom = 96.0
+script = ExtResource("1_5um00")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=68249282]
 layout_mode = 0
 offset_left = 10.0
-offset_right = 184.0
-offset_bottom = 48.0
+offset_right = 272.0
+offset_bottom = 219.0
 
-[node name="PausedTitle" type="MarginContainer" parent="PanelContainer" unique_id=1580201593]
+[node name="PausedTitle" type="MarginContainer" parent="Control/PanelContainer" unique_id=1580201593]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PausedTitle" unique_id=1160395446]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PanelContainer/PausedTitle" unique_id=1160395446]
 layout_mode = 2
 theme_override_constants/separation = 14
 
-[node name="Label" type="Label" parent="PanelContainer/PausedTitle/VBoxContainer" unique_id=329272079]
+[node name="Label" type="Label" parent="Control/PanelContainer/PausedTitle/VBoxContainer" unique_id=329272079]
 layout_mode = 2
 text = "Paused"
 label_settings = SubResource("LabelSettings_830d4")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/PausedTitle/VBoxContainer" unique_id=1140414922]
+[node name="HSeparator" type="HSeparator" parent="Control/PanelContainer/PausedTitle/VBoxContainer" unique_id=1140414922]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxLine_830d4")
 
-[node name="Button" type="Button" parent="PanelContainer/PausedTitle/VBoxContainer" unique_id=1574217094]
+[node name="SeedSatchelButton" type="Button" parent="Control/PanelContainer/PausedTitle/VBoxContainer" unique_id=1574217094]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Seed Satchel"
 
-[node name="Button2" type="Button" parent="PanelContainer/PausedTitle/VBoxContainer" unique_id=907371870]
+[node name="FruitSatchelButton" type="Button" parent="Control/PanelContainer/PausedTitle/VBoxContainer" unique_id=907371870]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Fruit Satchel"
 
-[node name="Button3" type="Button" parent="PanelContainer/PausedTitle/VBoxContainer" unique_id=1699554225]
+[node name="ReturnToGameButton" type="Button" parent="Control/PanelContainer/PausedTitle/VBoxContainer" unique_id=1699554225]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Return To Game"
+
+[connection signal="pressed" from="Control/PanelContainer/PausedTitle/VBoxContainer/SeedSatchelButton" to="Control" method="_on_seed_satchel_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/PausedTitle/VBoxContainer/FruitSatchelButton" to="Control" method="_on_fruit_satchel_button_pressed"]
+[connection signal="pressed" from="Control/PanelContainer/PausedTitle/VBoxContainer/ReturnToGameButton" to="Control" method="_on_return_to_game_button_pressed"]

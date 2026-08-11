@@ -27,8 +27,17 @@ static func movement_input() -> Vector2:
 static func is_movement_input() -> bool:
 	if direction == Vector2.ZERO:
 		return false
-	else:
-		return true
+	
+	return true
 
-static func open_menu_hud() -> void :
-	pass
+static func open_menu_hud() -> bool:
+	if Input.is_action_just_pressed("Menu"):
+		print("y pressed")
+		return true
+	return false
+
+static func close_menu_hub() -> bool:
+	if Input.is_action_just_pressed("back"):
+		print("b is pressed")
+		return true
+	return false
