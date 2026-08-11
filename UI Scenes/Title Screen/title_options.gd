@@ -6,7 +6,7 @@ func _ready() -> void:
 
 func new_game_pressed() -> void:
 	GameState.current_scene = "New Game"
-	get_tree().change_scene_to_file("res://Game Scenes/Areas/Farm.tscn")
+	get_tree().change_scene_to_file("res://Game Scenes/MainGameNode/MainGame.tscn")
 
 
 

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://fif36am8vot0"]
+
+[ext_resource type="PackedScene" uid="uid://dpdsn0mkadryd" path="res://Game Scenes/Areas/Farm.tscn" id="1_1iw7i"]
+[ext_resource type="PackedScene" uid="uid://dnie8im41udp7" path="res://Jesse/Jesse.tscn" id="1_4nvne"]
+[ext_resource type="PackedScene" uid="uid://clee8bgopstj3" path="res://UI Scenes/Inventory/PlayerUi.tscn" id="3_jl57r"]
+
+[node name="MainGame" type="Node" unique_id=968453129]
+
+[node name="WorldAreas" type="Node" parent="." unique_id=1034429596]
+
+[node name="TheFarm" parent="WorldAreas" unique_id=673281839 instance=ExtResource("1_1iw7i")]
+
+[node name="Jesse" parent="." unique_id=1022458752 instance=ExtResource("1_4nvne")]
+unique_name_in_owner = true
+position = Vector2(276, 143)
+
+[node name="PlayerUi" parent="." unique_id=2098691322 instance=ExtResource("3_jl57r")]
