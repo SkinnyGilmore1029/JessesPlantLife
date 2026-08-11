@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://r1tnanex7qkr"]
+
+[ext_resource type="Texture2D" uid="uid://co1kpd4aotkmh" path="res://Assets/Pictures/Plants/JessePlant pumpkin2.png" id="1_2oy5m"]
+[ext_resource type="Texture2D" uid="uid://cska1myn6vygk" path="res://Assets/Pictures/Plants/JessePlant purple flower2.png" id="2_g8ccx"]
+
+[node name="NewSeedInventory" type="PanelContainer" unique_id=1286399046]
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=2058423321]
+layout_mode = 2
+columns = 2
+
+[node name="ItemList" type="ItemList" parent="GridContainer" unique_id=1334473371]
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 2
+item_0/text = "Pumpkin"
+item_0/icon = ExtResource("1_2oy5m")
+item_1/text = "PurpleFlower"
+item_1/icon = ExtResource("2_g8ccx")

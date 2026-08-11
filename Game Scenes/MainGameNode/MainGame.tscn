@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://clee8bgopstj3" path="res://UI/UI Scenes/Inventory/PlayerUi.tscn" id="3_jl57r"]
 [ext_resource type="PackedScene" uid="uid://bt3sewjubkpu0" path="res://UI/UI Scenes/PauseMenu/PauseHub.tscn" id="4_8qwid"]
 [ext_resource type="Script" uid="uid://b85gb17a08dmh" path="res://UI/UI Scripts/PauseScripts/pause_layer.gd" id="5_rfj5e"]
+[ext_resource type="PackedScene" uid="uid://bdr2wh8yai0l4" path="res://UI/UI Scenes/Inventory/MainSeedSatchel.tscn" id="6_1hspv"]
 
 [node name="MainGame" type="Node" unique_id=968453129]
 
@@ -16,9 +17,13 @@
 unique_name_in_owner = true
 position = Vector2(276, 143)
 
-[node name="PlayerUi" parent="." unique_id=2098691322 instance=ExtResource("3_jl57r")]
+[node name="TheUi" type="Node" parent="." unique_id=1519111623]
 
-[node name="PauseHub" parent="." unique_id=1880171091 instance=ExtResource("4_8qwid")]
+[node name="PlayerUi" parent="TheUi" unique_id=2098691322 instance=ExtResource("3_jl57r")]
+
+[node name="PauseHub" parent="TheUi" unique_id=1880171091 instance=ExtResource("4_8qwid")]
+visible = false
 script = ExtResource("5_rfj5e")
 
-[connection signal="visibility_changed" from="PauseHub" to="PauseHub" method="_on_visibility_changed"]
+[node name="MainSeedSatchel" parent="TheUi" unique_id=265641359 instance=ExtResource("6_1hspv")]
+visible = false

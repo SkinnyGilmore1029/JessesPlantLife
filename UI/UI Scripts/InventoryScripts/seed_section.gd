@@ -21,3 +21,6 @@ func handle_pink_count(new_count: int) -> void:
 
 func handle_vine_count(new_count: int) -> void:
 	%VinePlantCount.text = str(new_count)
+
+func focus_pumpkin()->void:
+	pass

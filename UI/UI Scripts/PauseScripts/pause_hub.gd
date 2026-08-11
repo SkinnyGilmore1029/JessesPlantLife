@@ -21,7 +21,7 @@ func close_menu() -> void:
 	self.get_parent().visible = false
 
 func _on_seed_satchel_button_pressed() -> void:
-	pass # Replace with function body.
+	SignalHub.open_seed_satchel.emit(self.get_parent())
 
 func _on_return_to_game_button_pressed() -> void:
 	close_menu()

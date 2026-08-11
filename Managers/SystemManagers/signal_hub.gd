@@ -38,3 +38,6 @@ signal change_pink_ui_count(new_count)
 ##Changes the VineUICount label on the player ui.
 @warning_ignore("unused_signal")
 signal change_vine_ui_count(new_count)
+
+@warning_ignore("unused_signal")
+signal open_seed_satchel

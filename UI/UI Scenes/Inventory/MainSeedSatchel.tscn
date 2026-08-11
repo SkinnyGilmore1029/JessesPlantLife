@@ -1,28 +1,32 @@
 [gd_scene format=3 uid="uid://bdr2wh8yai0l4"]
 
 [ext_resource type="PackedScene" uid="uid://gm3j1cssbjc3" path="res://UI/UI Scenes/Inventory/SeedSatchelTitle.tscn" id="1_kjtaa"]
+[ext_resource type="Script" uid="uid://dkp28qgly7epm" path="res://UI/UI Scripts/InventoryScripts/main_seed_control.gd" id="1_ya7ow"]
 [ext_resource type="PackedScene" uid="uid://b5w65ae7wi8ih" path="res://UI/UI Scenes/Inventory/SeedSection.tscn" id="2_l6t1o"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_guak4"]
-bg_color = Color(0.33, 0.22550002, 0, 1)
+[node name="MainSeedSatchel" type="CanvasLayer" unique_id=265641359]
 
-[sub_resource type="Theme" id="Theme_830d4"]
-Panel/styles/panel = SubResource("StyleBoxFlat_guak4")
+[node name="MainSeedControl" type="Control" parent="." unique_id=225443359]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ya7ow")
 
-[node name="MainSeedSatchel" type="Panel" unique_id=1674651397]
-offset_right = 638.0
-offset_bottom = 361.0
-theme = SubResource("Theme_830d4")
-
-[node name="SeedSatchelTitle" parent="." unique_id=803450014 instance=ExtResource("1_kjtaa")]
+[node name="SeedSatchelTitle" parent="MainSeedControl" unique_id=803450014 instance=ExtResource("1_kjtaa")]
 layout_mode = 1
-offset_left = -106.0
-offset_right = 100.0
+offset_left = 194.0
+offset_right = 400.0
 offset_bottom = 69.0
 
-[node name="SeedSection" parent="." unique_id=1296898747 instance=ExtResource("2_l6t1o")]
-layout_mode = 1
-offset_left = 155.0
-offset_top = 83.0
-offset_right = 478.0
-offset_bottom = 331.0
+[node name="SeedSection" parent="MainSeedControl" unique_id=1296898747 instance=ExtResource("2_l6t1o")]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 5.0
+offset_right = 509.0
+offset_bottom = 253.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
