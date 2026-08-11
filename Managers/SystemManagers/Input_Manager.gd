@@ -29,3 +29,6 @@ static func is_movement_input() -> bool:
 		return false
 	else:
 		return true
+
+static func open_menu_hud() -> void :
+	pass

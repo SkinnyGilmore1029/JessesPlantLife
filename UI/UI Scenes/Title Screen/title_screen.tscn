@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://osngv2kbelgc"]
 
-[ext_resource type="PackedScene" uid="uid://bbbrmo2vpga4s" path="res://UI Scenes/Title Screen/Title.tscn" id="1_d5o75"]
+[ext_resource type="PackedScene" uid="uid://bbbrmo2vpga4s" path="res://UI/UI Scenes/Title Screen/Title.tscn" id="1_d5o75"]
 [ext_resource type="Texture2D" uid="uid://c7d2prhtkwqjp" path="res://Assets/Pictures/Plants/Starting_seed.png" id="1_gk3e6"]
-[ext_resource type="PackedScene" uid="uid://dhspdtu4ym1ae" path="res://UI Scenes/Title Screen/New_options.tscn" id="1_wi1nd"]
+[ext_resource type="PackedScene" uid="uid://dhspdtu4ym1ae" path="res://UI/UI Scenes/Title Screen/New_options.tscn" id="1_wi1nd"]
 [ext_resource type="Texture2D" uid="uid://co1kpd4aotkmh" path="res://Assets/Pictures/Plants/JessePlant pumpkin2.png" id="4_3p37g"]
 [ext_resource type="Texture2D" uid="uid://cm52cfe13flba" path="res://Assets/Pictures/Plants/JessePlant 7.png" id="5_bh3r6"]
 [ext_resource type="Texture2D" uid="uid://dsyfr2qb2v347" path="res://Assets/Pictures/Plants/JessePlant sprout2.png" id="6_ls6w6"]

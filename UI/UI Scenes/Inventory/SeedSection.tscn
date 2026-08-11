@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5w65ae7wi8ih"]
 
 [ext_resource type="Texture2D" uid="uid://bn1me8uy8r1lb" path="res://Assets/Pictures/Plants/JessePlant berry vine2.png" id="1_iht5u"]
-[ext_resource type="Script" uid="uid://dpbagbqr3bkoe" path="res://UI Scenes/InventoryScripts/seed_section.gd" id="1_mctfd"]
+[ext_resource type="Script" uid="uid://dpbagbqr3bkoe" path="res://UI/UI Scripts/InventoryScripts/seed_section.gd" id="1_mctfd"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_830d4"]
 thickness = 9

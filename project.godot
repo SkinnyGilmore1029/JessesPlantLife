@@ -44,7 +44,8 @@ folder_colors={
 "res://Managers/Resources/": "purple",
 "res://Managers/Themes/": "purple",
 "res://The Plants/": "blue",
-"res://UI Scenes/": "gray"
+"res://UI/UI Scenes/": "gray",
+"res://UI/UI Scripts/": "gray"
 }
 
 [global_group]

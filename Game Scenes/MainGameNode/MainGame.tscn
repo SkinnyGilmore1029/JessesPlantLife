@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dpdsn0mkadryd" path="res://Game Scenes/Areas/Farm.tscn" id="1_1iw7i"]
 [ext_resource type="PackedScene" uid="uid://dnie8im41udp7" path="res://Jesse/Jesse.tscn" id="1_4nvne"]
-[ext_resource type="PackedScene" uid="uid://clee8bgopstj3" path="res://UI Scenes/Inventory/PlayerUi.tscn" id="3_jl57r"]
+[ext_resource type="PackedScene" uid="uid://clee8bgopstj3" path="res://UI/UI Scenes/Inventory/PlayerUi.tscn" id="3_jl57r"]
 
 [node name="MainGame" type="Node" unique_id=968453129]
 

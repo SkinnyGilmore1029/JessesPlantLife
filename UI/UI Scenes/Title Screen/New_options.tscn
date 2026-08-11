@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhspdtu4ym1ae"]
 
-[ext_resource type="Script" uid="uid://c2n27g83bfd8l" path="res://UI Scenes/Title Screen/title_options.gd" id="1_u6g7c"]
+[ext_resource type="Script" uid="uid://c2n27g83bfd8l" path="res://UI/UI Scripts/TitleScripts/title_options.gd" id="1_oayck"]
 
 [node name="NewOptions" type="Control" unique_id=955804311]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_u6g7c")
+script = ExtResource("1_oayck")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1408366681]
 layout_mode = 1
