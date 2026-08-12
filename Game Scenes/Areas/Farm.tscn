@@ -6,6 +6,10 @@
 [ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="4_uttj0"]
 [ext_resource type="PackedScene" uid="uid://ch65vyr6ln1bs" path="res://The Plants/PlantScenes/Middle_plant.tscn" id="5_uttj0"]
 [ext_resource type="PackedScene" uid="uid://drrhktrpanuqx" path="res://The Plants/PlantScenes/Pumkin.tscn" id="7_3nt1h"]
+[ext_resource type="PackedScene" uid="uid://bhd2xellde2nj" path="res://The Plants/FruitScenes/Apple.tscn" id="7_3o8bk"]
+[ext_resource type="PackedScene" uid="uid://db1yoojm4q7rd" path="res://The Plants/FruitScenes/Cherry.tscn" id="8_0r1uo"]
+[ext_resource type="PackedScene" uid="uid://bfi1w2yy82660" path="res://The Plants/FruitScenes/Mushroom.tscn" id="9_vhtly"]
+[ext_resource type="PackedScene" uid="uid://b4lay5vj85x5t" path="res://The Plants/FruitScenes/Strawberries.tscn" id="10_gelx4"]
 
 [sub_resource type="Resource" id="Resource_gml6c"]
 script = ExtResource("4_uttj0")
@@ -57,3 +61,54 @@ position = Vector2(473, 293)
 
 [node name="Pumkin3" parent="." unique_id=1080967605 instance=ExtResource("7_3nt1h")]
 position = Vector2(548, 252)
+
+[node name="Apple" parent="." unique_id=664540048 instance=ExtResource("7_3o8bk")]
+position = Vector2(311, 240)
+
+[node name="Apple2" parent="." unique_id=1359070931 instance=ExtResource("7_3o8bk")]
+position = Vector2(188, 72)
+
+[node name="Apple3" parent="." unique_id=879495100 instance=ExtResource("7_3o8bk")]
+position = Vector2(125, 235)
+
+[node name="Apple4" parent="." unique_id=96694851 instance=ExtResource("7_3o8bk")]
+position = Vector2(89, 71)
+
+[node name="Cherry" parent="." unique_id=1950515057 instance=ExtResource("8_0r1uo")]
+position = Vector2(825, 815)
+
+[node name="Cherry2" parent="." unique_id=830706541 instance=ExtResource("8_0r1uo")]
+position = Vector2(892, 810)
+
+[node name="Cherry3" parent="." unique_id=290478392 instance=ExtResource("8_0r1uo")]
+position = Vector2(969, 809)
+
+[node name="Cherry4" parent="." unique_id=649218834 instance=ExtResource("8_0r1uo")]
+position = Vector2(1060, 812)
+
+[node name="Mushroom" parent="." unique_id=593324030 instance=ExtResource("9_vhtly")]
+position = Vector2(48, 795)
+
+[node name="Mushroom2" parent="." unique_id=2080237634 instance=ExtResource("9_vhtly")]
+position = Vector2(52, 852)
+
+[node name="Mushroom3" parent="." unique_id=635217501 instance=ExtResource("9_vhtly")]
+position = Vector2(110, 818)
+
+[node name="Strawberries" parent="." unique_id=253686764 instance=ExtResource("10_gelx4")]
+position = Vector2(967, -119)
+
+[node name="Strawberries2" parent="." unique_id=1041439831 instance=ExtResource("10_gelx4")]
+position = Vector2(811, -124)
+
+[node name="Strawberries3" parent="." unique_id=321824163 instance=ExtResource("10_gelx4")]
+position = Vector2(676, -135)
+
+[node name="Strawberries4" parent="." unique_id=1984390037 instance=ExtResource("10_gelx4")]
+position = Vector2(570, -119)
+
+[node name="Strawberries5" parent="." unique_id=702891199 instance=ExtResource("10_gelx4")]
+position = Vector2(715, -72)
+
+[node name="Strawberries6" parent="." unique_id=855138898 instance=ExtResource("10_gelx4")]
+position = Vector2(639, -60)

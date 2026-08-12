@@ -1,12 +1,7 @@
 [gd_scene format=3 uid="uid://c2juw2hxqun8o"]
 
+[ext_resource type="Script" uid="uid://doh8p56hl3k50" path="res://UI/UI Scripts/InventoryScripts/fruit_section.gd" id="1_w1guj"]
 [ext_resource type="Texture2D" uid="uid://drh6lswcucitn" path="res://Assets/Pictures/Plants/basic_grass_biom_things.png" id="1_w2imu"]
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_2otri"]
-color = Color(1, 1, 1, 1)
-grow_begin = -4.0
-grow_end = -5.0
-thickness = 5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jr51m"]
 atlas = ExtResource("1_w2imu")
@@ -25,32 +20,20 @@ atlas = ExtResource("1_w2imu")
 region = Rect2(80, 0, 16, 16)
 
 [node name="FruitSection" type="PanelContainer" unique_id=1302600145]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -80.0
-offset_right = 173.0
-offset_bottom = 80.0
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -293.0
+offset_right = 158.5
+offset_bottom = 258.0
+grow_horizontal = 2
+script = ExtResource("1_w1guj")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2141942366]
 layout_mode = 2
-theme_override_constants/separation = 7
-
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1615042772]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=1506473011]
-layout_mode = 2
-text = "Fruit Section"
-
-[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=545006189]
-layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxLine_2otri")
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1413189705]
 layout_mode = 2
@@ -61,10 +44,11 @@ theme_override_constants/margin_bottom = 5
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer" unique_id=1430813674]
 layout_mode = 2
 theme_override_constants/h_separation = 20
-theme_override_constants/v_separation = 14
+theme_override_constants/v_separation = 30
 columns = 3
 
-[node name="AppleNameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=426197015]
+[node name="AppleNameButton" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=815619403]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Apples"
 
@@ -77,12 +61,13 @@ expand_mode = 2
 stretch_mode = 5
 
 [node name="AppleCountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=316569683]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="CherriesNameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=679830729]
+[node name="CherriesNameButton" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=319995417]
 layout_mode = 2
 text = "Cherries"
 
@@ -93,10 +78,11 @@ offset_transform_scale = Vector2(1.5, 1.5)
 texture = SubResource("AtlasTexture_ikdss")
 
 [node name="CherriesCountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1597573792]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 
-[node name="StrawberriesNameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1687724709]
+[node name="StrawberriesNameButton" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1859427474]
 layout_mode = 2
 text = "Strawberries"
 
@@ -106,10 +92,11 @@ offset_transform_enabled = true
 texture = SubResource("AtlasTexture_v0wld")
 
 [node name="StrawberriesCountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1613862433]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 
-[node name="MushroomNameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1305451638]
+[node name="MushroomNameButton" type="Button" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1760379662]
 layout_mode = 2
 text = "Mushrooms"
 
@@ -119,6 +106,7 @@ offset_transform_enabled = true
 offset_transform_scale = Vector2(1.5, 1.5)
 texture = SubResource("AtlasTexture_mxjvk")
 
-[node name="Fruit4CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1457017988]
+[node name="MushroomCountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1457017988]
+unique_name_in_owner = true
 layout_mode = 2
 text = "0"

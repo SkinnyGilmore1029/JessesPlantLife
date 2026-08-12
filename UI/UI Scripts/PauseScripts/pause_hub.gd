@@ -12,13 +12,14 @@ func _process(_delta: float) -> void:
 	if GameInputEvents.close_menu_hub():
 		close_menu()
 
-##
+##Opens the Main PauseHub.
 func open_menu() -> void:
 	self.get_parent().visible = true
 	get_tree().paused = true
 	%SeedSatchelButton.grab_focus()
 	GameState.last_menu_on ="Pause Hub"
 
+##Helps close which ever current menu is open.
 func close_menu() -> void:
 	match GameState.last_menu_on:
 		"Pause Hub":
@@ -26,13 +27,21 @@ func close_menu() -> void:
 			self.get_parent().visible = false
 		"Seed Satchel":
 			SignalHub.close_seed_satchel.emit(self.get_parent(), %SeedSatchelButton)
+		"Fruit Satchel":
+			SignalHub.close_fruit_satchel.emit(self.get_parent(), %SeedSatchelButton)
 
+##The button signal that emits the open_seed_satchel signal.
 func _on_seed_satchel_button_pressed() -> void:
+	#why does this work
 	SignalHub.open_seed_satchel.emit(self.get_parent())
 
+##The button signal that emit the open_fruit_satchel signal.
+func _on_fruit_satchel_button_pressed() -> void:
+	SignalHub.open_fruit_satchel.emit(self.get_parent())
 
+##The button signal that emits the close_menu function.
 func _on_return_to_game_button_pressed() -> void:
 	close_menu()
 
-func _on_fruit_satchel_button_pressed() -> void:
-	pass # Replace with function body.
+
+

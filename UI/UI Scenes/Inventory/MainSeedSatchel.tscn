@@ -15,18 +15,24 @@ script = ExtResource("1_ya7ow")
 
 [node name="SeedSatchelTitle" parent="MainSeedControl" unique_id=803450014 instance=ExtResource("1_kjtaa")]
 layout_mode = 1
-offset_left = 194.0
-offset_right = 400.0
+anchors_preset = -1
+anchor_left = 8.025001
+anchor_right = 8.025001
+offset_left = -103.00003
+offset_right = 102.99997
 offset_bottom = 69.0
 
 [node name="SeedSection" parent="MainSeedControl" unique_id=1296898747 instance=ExtResource("2_l6t1o")]
-layout_mode = 0
-offset_left = 125.0
-offset_top = 5.0
-offset_right = 509.0
-offset_bottom = 253.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 8.425
+anchor_top = 1.575
+anchor_right = 8.425
+anchor_bottom = 1.575
+offset_left = -192.0
+offset_top = 13.0
+offset_right = 192.0
+offset_bottom = 261.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 metadata/_edit_use_anchors_ = true

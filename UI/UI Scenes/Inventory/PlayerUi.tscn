@@ -1,10 +1,27 @@
 [gd_scene format=3 uid="uid://clee8bgopstj3"]
 
 [ext_resource type="Script" uid="uid://butywno0p0w43" path="res://UI/UI Scripts/InventoryScripts/player_ui.gd" id="1_5vm04"]
+[ext_resource type="Texture2D" uid="uid://drh6lswcucitn" path="res://Assets/Pictures/Plants/basic_grass_biom_things.png" id="2_0qs1i"]
 [ext_resource type="Texture2D" uid="uid://co1kpd4aotkmh" path="res://Assets/Pictures/Plants/JessePlant pumpkin2.png" id="2_6jen0"]
 [ext_resource type="Texture2D" uid="uid://cska1myn6vygk" path="res://Assets/Pictures/Plants/JessePlant purple flower2.png" id="3_0qs1i"]
 [ext_resource type="Texture2D" uid="uid://cm52cfe13flba" path="res://Assets/Pictures/Plants/JessePlant 7.png" id="4_vh7xe"]
 [ext_resource type="Texture2D" uid="uid://bn1me8uy8r1lb" path="res://Assets/Pictures/Plants/JessePlant berry vine2.png" id="5_e1hot"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_830d4"]
+atlas = ExtResource("2_0qs1i")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_guak4"]
+atlas = ExtResource("2_0qs1i")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vh7xe"]
+atlas = ExtResource("2_0qs1i")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jen0"]
+atlas = ExtResource("2_0qs1i")
+region = Rect2(16, 32, 16, 16)
 
 [node name="PlayerUi" type="CanvasLayer" unique_id=2098691322]
 script = ExtResource("1_5vm04")
@@ -22,57 +39,116 @@ offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=98683513]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1793831508]
+layout_mode = 2
+
+[node name="FruitUI" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1119200124]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 5
 
-[node name="SeedSection" type="HBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2068331822]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/FruitUI" unique_id=1813648801]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="MushroomsTexture" type="TextureRect" parent="PanelContainer/VBoxContainer/FruitUI/HBoxContainer" unique_id=1437772445]
+layout_mode = 2
+texture = SubResource("AtlasTexture_830d4")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MushroomsCountUILabel" type="Label" parent="PanelContainer/VBoxContainer/FruitUI/HBoxContainer" unique_id=1090884886]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="StrawberriesTexture" type="TextureRect" parent="PanelContainer/VBoxContainer/FruitUI/HBoxContainer" unique_id=437168819]
+layout_mode = 2
+texture = SubResource("AtlasTexture_guak4")
+
+[node name="StrawberriesCountUILabel" type="Label" parent="PanelContainer/VBoxContainer/FruitUI/HBoxContainer" unique_id=2051178325]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="ApplesTexture" type="TextureRect" parent="PanelContainer/VBoxContainer/FruitUI/HBoxContainer" unique_id=920277421]
+layout_mode = 2
+texture = SubResource("AtlasTexture_vh7xe")
+
+[node name="ApplesCountUILabel" type="Label" parent="PanelContainer/VBoxContainer/FruitUI/HBoxContainer" unique_id=1557042832]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="CherriesTexture" type="TextureRect" parent="PanelContainer/VBoxContainer/FruitUI/HBoxContainer" unique_id=1351939630]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_6jen0")
+
+[node name="CherriesCountUILabel" type="Label" parent="PanelContainer/VBoxContainer/FruitUI/HBoxContainer" unique_id=1726343529]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="SeedUI" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=98683513]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="SeedSection" type="HBoxContainer" parent="PanelContainer/VBoxContainer/SeedUI" unique_id=2068331822]
 layout_mode = 2
 theme_override_constants/separation = 7
 
-[node name="PumpkinTexture" type="TextureRect" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1826390053]
+[node name="PumpkinTexture" type="TextureRect" parent="PanelContainer/VBoxContainer/SeedUI/SeedSection" unique_id=1826390053]
 layout_mode = 2
 texture = ExtResource("2_6jen0")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="PumpkinUICount" type="Label" parent="PanelContainer/MarginContainer/SeedSection" unique_id=893438643]
+[node name="PumpkinUICount" type="Label" parent="PanelContainer/VBoxContainer/SeedUI/SeedSection" unique_id=893438643]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 
-[node name="PurpleTexture" type="TextureRect" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1651045226]
+[node name="PurpleTexture" type="TextureRect" parent="PanelContainer/VBoxContainer/SeedUI/SeedSection" unique_id=1651045226]
 layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(5, 6)
+offset_transform_scale = Vector2(2, 2)
 texture = ExtResource("3_0qs1i")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="PurpleUICount" type="Label" parent="PanelContainer/MarginContainer/SeedSection" unique_id=801159479]
+[node name="PurpleUICount" type="Label" parent="PanelContainer/VBoxContainer/SeedUI/SeedSection" unique_id=801159479]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 
-[node name="PinkTexture" type="TextureRect" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1361327059]
+[node name="PinkTexture" type="TextureRect" parent="PanelContainer/VBoxContainer/SeedUI/SeedSection" unique_id=1361327059]
 layout_mode = 2
 texture = ExtResource("4_vh7xe")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="PinkUICount" type="Label" parent="PanelContainer/MarginContainer/SeedSection" unique_id=533816803]
+[node name="PinkUICount" type="Label" parent="PanelContainer/VBoxContainer/SeedUI/SeedSection" unique_id=533816803]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 
-[node name="VineTexture" type="TextureRect" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1003026924]
+[node name="VineTexture" type="TextureRect" parent="PanelContainer/VBoxContainer/SeedUI/SeedSection" unique_id=1003026924]
 layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
 texture = ExtResource("5_e1hot")
 expand_mode = 2
 stretch_mode = 5
 
-[node name="VineUICount" type="Label" parent="PanelContainer/MarginContainer/SeedSection" unique_id=1065776805]
+[node name="VineUICount" type="Label" parent="PanelContainer/VBoxContainer/SeedUI/SeedSection" unique_id=1065776805]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"

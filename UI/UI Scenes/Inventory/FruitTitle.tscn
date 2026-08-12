@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dfldm7dbsespf"]
+
+[ext_resource type="LabelSettings" uid="uid://c6h87ahbyms35" path="res://Managers/Themes/Jesse_pink.tres" id="1_f0odq"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_830d4"]
+color = Color(0.90588236, 0.6039216, 0.7372549, 1)
+thickness = 10
+
+[node name="FruitTitle" type="PanelContainer" unique_id=784699391]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_right = 90.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1860221689]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1356650428]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer" unique_id=1802282342]
+layout_mode = 2
+text = "Fruit Satchel"
+label_settings = ExtResource("1_f0odq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1418247109]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/MarginContainer2" unique_id=457163805]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_830d4")
