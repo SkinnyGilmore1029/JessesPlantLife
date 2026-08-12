@@ -4,4 +4,5 @@
 
 [resource]
 script = ExtResource("1_cf2q8")
+item_name = "Purple Flower"
 metadata/_custom_type_script = "uid://c3qa683cxjpsp"

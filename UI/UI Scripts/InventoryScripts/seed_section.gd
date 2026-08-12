@@ -2,6 +2,7 @@
 class_name SeedInventory
 extends PanelContainer
 
+#has the button i am trying to get to.
 
 func _ready() -> void:
 	SignalHub.change_pumpkin_count.connect(handle_pumpkin_count)
@@ -23,4 +24,6 @@ func handle_vine_count(new_count: int) -> void:
 	%VinePlantCount.text = str(new_count)
 
 func focus_pumpkin()->void:
-	pass
+	%SeedSatchelPumpkin.grab_focus()
+	GameState.last_menu_on="Seed Satchel"
+	print(GameState.last_menu_on)

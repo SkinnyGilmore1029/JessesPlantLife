@@ -41,3 +41,6 @@ signal change_vine_ui_count(new_count)
 
 @warning_ignore("unused_signal")
 signal open_seed_satchel
+
+@warning_ignore(("unused_signal"))
+signal close_seed_satchel

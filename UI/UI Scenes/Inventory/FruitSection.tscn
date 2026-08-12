@@ -1,12 +1,28 @@
 [gd_scene format=3 uid="uid://c2juw2hxqun8o"]
 
-[ext_resource type="Texture2D" uid="uid://c7d2prhtkwqjp" path="res://Assets/Pictures/Plants/Starting_seed.png" id="1_73o0e"]
+[ext_resource type="Texture2D" uid="uid://drh6lswcucitn" path="res://Assets/Pictures/Plants/basic_grass_biom_things.png" id="1_w2imu"]
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_2otri"]
 color = Color(1, 1, 1, 1)
 grow_begin = -4.0
 grow_end = -5.0
 thickness = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr51m"]
+atlas = ExtResource("1_w2imu")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikdss"]
+atlas = ExtResource("1_w2imu")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0wld"]
+atlas = ExtResource("1_w2imu")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxjvk"]
+atlas = ExtResource("1_w2imu")
+region = Rect2(80, 0, 16, 16)
 
 [node name="FruitSection" type="PanelContainer" unique_id=1302600145]
 anchors_preset = 4
@@ -20,6 +36,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2141942366]
 layout_mode = 2
+theme_override_constants/separation = 7
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=1615042772]
 layout_mode = 2
@@ -44,52 +61,63 @@ theme_override_constants/margin_bottom = 5
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer" unique_id=1430813674]
 layout_mode = 2
 theme_override_constants/h_separation = 20
-theme_override_constants/v_separation = 10
+theme_override_constants/v_separation = 14
 columns = 3
 
-[node name="Fruit1NameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=426197015]
+[node name="AppleNameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=426197015]
 layout_mode = 2
-text = "Fruit 1"
+text = "Apples"
 
-[node name="Fruit1Texture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=642727263]
+[node name="AppleTexture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=642727263]
 layout_mode = 2
-texture = ExtResource("1_73o0e")
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_jr51m")
+expand_mode = 2
+stretch_mode = 5
 
-[node name="Fruit1CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=316569683]
+[node name="AppleCountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=316569683]
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CherriesNameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=679830729]
+layout_mode = 2
+text = "Cherries"
+
+[node name="CherriesTexture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=436662902]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_ikdss")
+
+[node name="CherriesCountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1597573792]
 layout_mode = 2
 text = "0"
 
-[node name="Fruit2NameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=679830729]
+[node name="StrawberriesNameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1687724709]
 layout_mode = 2
-text = "Fruit 2"
+text = "Strawberries"
 
-[node name="Fruit2Texture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=436662902]
+[node name="StrawberriesTexture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=800578429]
 layout_mode = 2
-texture = ExtResource("1_73o0e")
+offset_transform_enabled = true
+texture = SubResource("AtlasTexture_v0wld")
 
-[node name="Fruit2CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1597573792]
+[node name="StrawberriesCountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1613862433]
 layout_mode = 2
 text = "0"
 
-[node name="Fruit3NameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1687724709]
+[node name="MushroomNameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1305451638]
 layout_mode = 2
-text = "Fruit 3"
+text = "Mushrooms"
 
-[node name="Fruit3Texture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=800578429]
+[node name="MushroomTexture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1015350528]
 layout_mode = 2
-texture = ExtResource("1_73o0e")
-
-[node name="Fruit3CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1613862433]
-layout_mode = 2
-text = "0"
-
-[node name="Fruit4NameLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1305451638]
-layout_mode = 2
-text = "Fruit 4"
-
-[node name="Fruit4Texture" type="TextureRect" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1015350528]
-layout_mode = 2
-texture = ExtResource("1_73o0e")
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.5, 1.5)
+texture = SubResource("AtlasTexture_mxjvk")
 
 [node name="Fruit4CountLabel" type="Label" parent="VBoxContainer/MarginContainer/GridContainer" unique_id=1457017988]
 layout_mode = 2

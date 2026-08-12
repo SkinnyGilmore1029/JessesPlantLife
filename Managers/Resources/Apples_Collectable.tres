@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Collectables" format=3 uid="uid://daovp7kko8k3s"]
+
+[ext_resource type="Script" uid="uid://c3qa683cxjpsp" path="res://Managers/SystemManagers/Collectable_Manager.gd" id="1_k1ccv"]
+
+[resource]
+script = ExtResource("1_k1ccv")
+item_name = "Apple"
+metadata/_custom_type_script = "uid://c3qa683cxjpsp"
