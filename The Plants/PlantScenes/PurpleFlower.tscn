@@ -1,20 +1,19 @@
 [gd_scene format=3 uid="uid://dpjbwk4a6ffua"]
 
 [ext_resource type="Texture2D" uid="uid://cska1myn6vygk" path="res://Assets/Pictures/Plants/JessePlant purple flower2.png" id="1_856iu"]
-[ext_resource type="Script" uid="uid://vcuufh800me5" path="res://The Plants/PlantScripts/purple_flower.gd" id="1_xngji"]
-[ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="2_m7vwf"]
-
-[sub_resource type="Resource" id="Resource_gmk3n"]
-script = ExtResource("2_m7vwf")
-plant_name = "Purple Lady"
-metadata/_custom_type_script = "uid://d16hmprr7a2bu"
+[ext_resource type="Script" uid="uid://coknafym5vnpx" path="res://The Plants/PlantScripts/plant_personality.gd" id="1_m7vwf"]
+[ext_resource type="PackedScene" uid="uid://b6glpsoh6q1r" path="res://Components/ComponentScenes/TimerComponent.tscn" id="4_ikdss"]
+[ext_resource type="PackedScene" uid="uid://bcblt421q0nxy" path="res://Components/ComponentScenes/GettingFedComponent.tscn" id="4_jr51m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_830d4"]
 size = Vector2(8.333334, 14)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_830d4"]
+radius = 11.0
+height = 42.0
+
 [node name="PurpleFlower" type="StaticBody2D" unique_id=1079809071]
-script = ExtResource("1_xngji")
-plant_data = SubResource("Resource_gmk3n")
+script = ExtResource("1_m7vwf")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=504411694]
 scale = Vector2(3, 3)
@@ -24,3 +23,12 @@ texture = ExtResource("1_856iu")
 position = Vector2(-11, -17)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_830d4")
+
+[node name="GettingFedComponent" parent="." unique_id=410606877 instance=ExtResource("4_jr51m")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GettingFedComponent" unique_id=1464566007]
+position = Vector2(-11, -17)
+shape = SubResource("CapsuleShape2D_830d4")
+debug_color = Color(0.5158667, 0.5757581, 0.061225876, 0.41960785)
+
+[node name="TimerComponent" parent="." unique_id=1323039985 instance=ExtResource("4_ikdss")]

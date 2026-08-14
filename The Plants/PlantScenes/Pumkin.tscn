@@ -3,8 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://co1kpd4aotkmh" path="res://Assets/Pictures/Plants/JessePlant pumpkin2.png" id="1_mcmkf"]
 [ext_resource type="Script" uid="uid://1yytif3xy5b8" path="res://The Plants/PlantScripts/pumkin.gd" id="1_opyvj"]
 [ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="2_gmk3n"]
-[ext_resource type="PackedScene" uid="uid://b7sntqiyfk0kn" path="res://Components/ComponentScenes/CollectableComponent.tscn" id="2_tqnlu"]
-[ext_resource type="Resource" uid="uid://bx0742rd3a03o" path="res://Managers/Resources/PumpkinLabel.tres" id="3_24nej"]
 
 [sub_resource type="Resource" id="Resource_830d4"]
 script = ExtResource("2_gmk3n")
@@ -16,10 +14,8 @@ metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 [sub_resource type="CircleShape2D" id="CircleShape2D_830d4"]
 radius = 8.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_guak4"]
-radius = 8.0
-
 [node name="Pumkin" type="StaticBody2D" unique_id=508771186]
+scale = Vector2(2, 2)
 script = ExtResource("1_opyvj")
 plant_data = SubResource("Resource_830d4")
 
@@ -30,11 +26,3 @@ texture = ExtResource("1_mcmkf")
 position = Vector2(1, -3)
 shape = SubResource("CircleShape2D_830d4")
 disabled = true
-
-[node name="CollectableComponent" parent="." unique_id=507805451 instance=ExtResource("2_tqnlu")]
-collectable_data = ExtResource("3_24nej")
-
-[node name="CollectableCollsion" type="CollisionShape2D" parent="CollectableComponent" unique_id=166714627]
-position = Vector2(1, -3)
-shape = SubResource("CircleShape2D_guak4")
-debug_color = Color(0.9372549, 0.8392157, 0, 0.28627452)

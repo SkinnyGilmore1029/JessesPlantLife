@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://daueqm5a3bv4n"]
+
+[ext_resource type="Texture2D" uid="uid://e0njwrrbwcdc" path="res://Assets/Pictures/Plants/Dancing_Flower.png" id="1_biddo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r25c"]
+atlas = ExtResource("1_biddo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmyub"]
+atlas = ExtResource("1_biddo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvqsx"]
+atlas = ExtResource("1_biddo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pvr44"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r25c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmyub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvqsx")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4goax"]
+radius = 2.5
+height = 15.0
+
+[node name="HelperPlant" type="StaticBody2D" unique_id=697831728]
+scale = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=940672929]
+sprite_frames = SubResource("SpriteFrames_pvr44")
+autoplay = "default"
+frame = 2
+frame_progress = 0.51004374
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1174646931]
+position = Vector2(-1, 9)
+shape = SubResource("CapsuleShape2D_4goax")

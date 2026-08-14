@@ -111,3 +111,23 @@ signal open_fruit_satchel
 signal close_fruit_satchel
 
 #------------------------------------------------------------------------------------------------------------------------------
+
+#Plant Signals
+#------------------------------------------------------------------------------------------------------------------------------
+
+##helps change the age of the plant do not know if im going to use it.
+@warning_ignore("unused_signal")
+signal change_age
+
+##Helps change the mood of the plant depending on hunger.
+@warning_ignore("unused_signal")
+signal change_mood
+
+
+##Helps change the hunger and helps control the mood of the plant.
+@warning_ignore("unused_signal")
+signal change_hunger
+
+##Helps take the food the plant has consumed to controller the hunger of the plant.
+@warning_ignore("unused_signal")
+signal take_food_consumed

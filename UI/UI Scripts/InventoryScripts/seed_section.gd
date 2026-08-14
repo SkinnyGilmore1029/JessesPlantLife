@@ -7,7 +7,6 @@ func _ready() -> void:
 	SignalHub.change_purple_count.connect(handle_purple_count)
 	SignalHub.change_pink_count.connect(handle_pink_count)
 	SignalHub.change_vine_count.connect(handle_vine_count)
-	#print("signals connected")
 
 ##The function emitted in the change_pumpkin_count signal
 ##Changes the text current count.

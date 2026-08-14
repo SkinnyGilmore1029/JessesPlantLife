@@ -9,16 +9,3 @@ extends Resource
 @export var hunger :Plant_manager.PlantHunger
 
 
-
-
-@warning_ignore("unused_signal")
-signal change_age
-
-@warning_ignore("unused_signal")
-signal change_mood
-
-@warning_ignore("unused_signal")
-signal change_hunger
-
-@warning_ignore("unused_signal")
-signal take_food_consumed

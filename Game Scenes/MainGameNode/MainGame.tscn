@@ -16,7 +16,7 @@
 
 [node name="Jesse" parent="." unique_id=1022458752 instance=ExtResource("1_4nvne")]
 unique_name_in_owner = true
-position = Vector2(276, 143)
+position = Vector2(996, 138)
 
 [node name="TheUi" type="Node" parent="." unique_id=1519111623]
 

@@ -2,10 +2,11 @@ extends StaticBody2D
 
 @export var plant_data: ChangingPlantData
 
+
 func _ready() -> void:
-	plant_data.change_mood.connect(change_plant_mood)
-	plant_data.change_hunger.connect(change_hunger_state)
-	plant_data.take_food_consumed.connect(take_food_consumed)
+	SignalHub.change_hunger.connect(change_hunger_state)
+	SignalHub.change_mood.connect(change_plant_mood)
+	SignalHub.take_food_consumed.connect(take_food_consumed)
 
 
 func change_plant_mood() -> void:
@@ -34,8 +35,8 @@ func change_hunger_state() -> void:
 		plant_data.hunger = Plant_manager.PlantHunger.CONTENT
 	else:
 		plant_data.hunger = Plant_manager.PlantHunger.FULL
-	plant_data.change_mood.emit()
+	SignalHub.change_mood.emit()
 
 func take_food_consumed() -> void:
 	plant_data.food_consumed -=1
-	plant_data.change_hunger.emit()
+	SignalHub.change_hunger.emit()

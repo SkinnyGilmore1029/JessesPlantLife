@@ -1,24 +1,11 @@
 [gd_scene format=3 uid="uid://ch65vyr6ln1bs"]
 
-[ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="1_dyb5p"]
-[ext_resource type="Script" uid="uid://js6xx8kvo7qx" path="res://The Plants/PlantScripts/middle_plant.gd" id="1_mdl8k"]
 [ext_resource type="Texture2D" uid="uid://c7d2prhtkwqjp" path="res://Assets/Pictures/Plants/Starting_seed.png" id="3_v7jb7"]
-[ext_resource type="PackedScene" uid="uid://bcblt421q0nxy" path="res://Components/ComponentScenes/GettingFedComponent.tscn" id="4_fy48k"]
-[ext_resource type="PackedScene" uid="uid://b6glpsoh6q1r" path="res://Components/ComponentScenes/TimerComponent.tscn" id="5_fy48k"]
-
-[sub_resource type="Resource" id="Resource_xjrmq"]
-script = ExtResource("1_dyb5p")
-metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tfj4v"]
 size = Vector2(44, 106)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_830d4"]
-radius = 56.0357
-
 [node name="MiddlePlant" type="StaticBody2D" unique_id=95146304]
-script = ExtResource("1_mdl8k")
-plant_data = SubResource("Resource_xjrmq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=823682349]
 position = Vector2(23.5, 46.5)
@@ -28,12 +15,3 @@ texture = ExtResource("3_v7jb7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1657566495]
 position = Vector2(24, 51)
 shape = SubResource("RectangleShape2D_tfj4v")
-
-[node name="GettingFedComponent" parent="." unique_id=410606877 instance=ExtResource("4_fy48k")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GettingFedComponent" unique_id=168146684]
-position = Vector2(25, 54)
-shape = SubResource("CircleShape2D_830d4")
-debug_color = Color(0.5196104, 0.5788421, 0.106270365, 0.27450982)
-
-[node name="TimerComponent" parent="." unique_id=1323039985 instance=ExtResource("5_fy48k")]

@@ -7,6 +7,6 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is FeedingComponent:
 		var feeding_component = area as FeedingComponent
 		the_plant.plant_data.food_consumed += feeding_component.feed_amount_added
-		the_plant.plant_data.change_hunger.emit()
+		SignalHub.change_hunger.emit()
 
 
