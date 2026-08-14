@@ -40,16 +40,16 @@ position = Vector2(125, 235)
 position = Vector2(89, 71)
 
 [node name="Cherry" parent="Fruit" unique_id=1950515057 instance=ExtResource("8_0r1uo")]
-position = Vector2(825, 815)
+position = Vector2(789, 778)
 
 [node name="Cherry2" parent="Fruit" unique_id=830706541 instance=ExtResource("8_0r1uo")]
-position = Vector2(892, 810)
+position = Vector2(829, 776)
 
 [node name="Cherry3" parent="Fruit" unique_id=290478392 instance=ExtResource("8_0r1uo")]
-position = Vector2(969, 809)
+position = Vector2(879, 775)
 
 [node name="Cherry4" parent="Fruit" unique_id=649218834 instance=ExtResource("8_0r1uo")]
-position = Vector2(1060, 812)
+position = Vector2(940, 775)
 
 [node name="Mushroom" parent="Fruit" unique_id=593324030 instance=ExtResource("9_vhtly")]
 position = Vector2(48, 795)

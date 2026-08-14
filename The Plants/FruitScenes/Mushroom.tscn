@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://drh6lswcucitn" path="res://Assets/Pictures/Plants/basic_grass_biom_things.png" id="1_7flm1"]
 [ext_resource type="PackedScene" uid="uid://b7sntqiyfk0kn" path="res://Components/ComponentScenes/CollectableComponent.tscn" id="2_5pqqp"]
-[ext_resource type="Resource" uid="uid://c00euhtkie0av" path="res://Managers/Resources/Mushroom_Collectable.tres" id="3_o35em"]
+[ext_resource type="Resource" uid="uid://c00euhtkie0av" path="res://Managers/Resources/Fruit Resources/Mushroom_Collectable.tres" id="3_o35em"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eu4t8"]
 
@@ -10,6 +10,7 @@
 radius = 13.038404
 
 [node name="Mushroom" type="StaticBody2D" unique_id=593324030]
+collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=72606350]
 scale = Vector2(2, 2)

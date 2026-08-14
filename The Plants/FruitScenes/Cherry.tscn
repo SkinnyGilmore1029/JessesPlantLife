@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://drh6lswcucitn" path="res://Assets/Pictures/Plants/basic_grass_biom_things.png" id="1_eab2y"]
 [ext_resource type="PackedScene" uid="uid://b7sntqiyfk0kn" path="res://Components/ComponentScenes/CollectableComponent.tscn" id="2_w8m10"]
-[ext_resource type="Resource" uid="uid://drt3d674nbhfe" path="res://Managers/Resources/Cherry_Collectable.tres" id="3_vhq8y"]
+[ext_resource type="Resource" uid="uid://drt3d674nbhfe" path="res://Managers/Resources/Fruit Resources/Cherry_Collectable.tres" id="3_vhq8y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_830d4"]
 
@@ -10,6 +10,7 @@
 radius = 6.0827627
 
 [node name="Cherry" type="StaticBody2D" unique_id=1950515057]
+collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=370058139]
 scale = Vector2(2, 2)

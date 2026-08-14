@@ -2,8 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://cska1myn6vygk" path="res://Assets/Pictures/Plants/JessePlant purple flower2.png" id="1_856iu"]
 [ext_resource type="Script" uid="uid://coknafym5vnpx" path="res://The Plants/PlantScripts/plant_personality.gd" id="1_m7vwf"]
+[ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="2_m7vwf"]
 [ext_resource type="PackedScene" uid="uid://b6glpsoh6q1r" path="res://Components/ComponentScenes/TimerComponent.tscn" id="4_ikdss"]
 [ext_resource type="PackedScene" uid="uid://bcblt421q0nxy" path="res://Components/ComponentScenes/GettingFedComponent.tscn" id="4_jr51m"]
+
+[sub_resource type="Resource" id="Resource_ikdss"]
+script = ExtResource("2_m7vwf")
+plant_name = "Julie"
+food_needed = 6
+time_until_hungry = 120.0
+metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_830d4"]
 size = Vector2(8.333334, 14)
@@ -14,6 +22,7 @@ height = 42.0
 
 [node name="PurpleFlower" type="StaticBody2D" unique_id=1079809071]
 script = ExtResource("1_m7vwf")
+plant_data = SubResource("Resource_ikdss")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=504411694]
 scale = Vector2(3, 3)
