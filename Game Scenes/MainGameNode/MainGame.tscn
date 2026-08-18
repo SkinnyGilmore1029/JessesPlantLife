@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b85gb17a08dmh" path="res://UI/UI Scripts/PauseScripts/pause_layer.gd" id="5_rfj5e"]
 [ext_resource type="PackedScene" uid="uid://bdr2wh8yai0l4" path="res://UI/UI Scenes/Inventory/MainSeedSatchel.tscn" id="6_1hspv"]
 [ext_resource type="PackedScene" uid="uid://bfykbwbnu7b7x" path="res://UI/UI Scenes/Inventory/MainFruitSatchel.tscn" id="7_t7tij"]
+[ext_resource type="PackedScene" uid="uid://8b1bfson7ypq" path="res://UI/UI Scenes/PlantUi/Plant_ui.tscn" id="8_e6mg1"]
 
 [node name="MainGame" type="Node" unique_id=968453129]
 
@@ -30,4 +31,7 @@ script = ExtResource("5_rfj5e")
 visible = false
 
 [node name="MainFruitSatchel" parent="TheUi" unique_id=243859907 instance=ExtResource("7_t7tij")]
+visible = false
+
+[node name="PlantUi" parent="TheUi" unique_id=1431627913 instance=ExtResource("8_e6mg1")]
 visible = false

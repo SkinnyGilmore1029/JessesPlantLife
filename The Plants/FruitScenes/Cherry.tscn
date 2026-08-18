@@ -4,8 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b7sntqiyfk0kn" path="res://Components/ComponentScenes/CollectableComponent.tscn" id="2_w8m10"]
 [ext_resource type="Resource" uid="uid://drt3d674nbhfe" path="res://Managers/Resources/Fruit Resources/Cherry_Collectable.tres" id="3_vhq8y"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_830d4"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_guak4"]
 radius = 6.0827627
 
@@ -17,11 +15,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_eab2y")
 region_enabled = true
 region_rect = Rect2(16, 32, 16, 16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=782665870]
-visible = false
-shape = SubResource("CircleShape2D_830d4")
-disabled = true
 
 [node name="CollectableComponent" parent="." unique_id=507805451 instance=ExtResource("2_w8m10")]
 collectable_data = ExtResource("3_vhq8y")

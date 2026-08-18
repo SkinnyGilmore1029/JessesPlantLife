@@ -5,12 +5,11 @@
 [ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="2_m7vwf"]
 [ext_resource type="PackedScene" uid="uid://b6glpsoh6q1r" path="res://Components/ComponentScenes/TimerComponent.tscn" id="4_ikdss"]
 [ext_resource type="PackedScene" uid="uid://bcblt421q0nxy" path="res://Components/ComponentScenes/GettingFedComponent.tscn" id="4_jr51m"]
+[ext_resource type="PackedScene" uid="uid://dc5i2fg57wafa" path="res://Components/ComponentScenes/InteractComponent.tscn" id="6_v0wld"]
 
 [sub_resource type="Resource" id="Resource_ikdss"]
 script = ExtResource("2_m7vwf")
-plant_name = "Julie"
-food_needed = 6
-time_until_hungry = 120.0
+fav_food = "Strawberries"
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_830d4"]
@@ -20,7 +19,13 @@ size = Vector2(8.333334, 14)
 radius = 11.0
 height = 42.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_guak4"]
+radius = 15.0
+height = 48.0
+
 [node name="PurpleFlower" type="StaticBody2D" unique_id=1079809071]
+collision_layer = 18
+collision_mask = 9
 script = ExtResource("1_m7vwf")
 plant_data = SubResource("Resource_ikdss")
 
@@ -41,3 +46,10 @@ shape = SubResource("CapsuleShape2D_830d4")
 debug_color = Color(0.5158667, 0.5757581, 0.061225876, 0.41960785)
 
 [node name="TimerComponent" parent="." unique_id=1323039985 instance=ExtResource("4_ikdss")]
+
+[node name="InteractComponent" parent="." unique_id=484913383 instance=ExtResource("6_v0wld")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComponent" unique_id=1053388683]
+position = Vector2(-10, -17)
+shape = SubResource("CapsuleShape2D_guak4")
+debug_color = Color(0.78787994, 0.42920652, 0.11164745, 0.41960785)

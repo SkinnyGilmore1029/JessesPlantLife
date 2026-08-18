@@ -4,9 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b7sntqiyfk0kn" path="res://Components/ComponentScenes/CollectableComponent.tscn" id="2_kxya0"]
 [ext_resource type="Resource" uid="uid://daovp7kko8k3s" path="res://Managers/Resources/Fruit Resources/Apples_Collectable.tres" id="3_mf5ix"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_830d4"]
-radius = 5.3333335
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_guak4"]
 radius = 6.0369234
 
@@ -18,10 +15,6 @@ collision_layer = 4
 texture = ExtResource("1_4jgxw")
 region_enabled = true
 region_rect = Rect2(32, 32, 16, 16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=694769317]
-shape = SubResource("CircleShape2D_830d4")
-disabled = true
 
 [node name="CollectableComponent" parent="." unique_id=507805451 instance=ExtResource("2_kxya0")]
 collectable_data = ExtResource("3_mf5ix")

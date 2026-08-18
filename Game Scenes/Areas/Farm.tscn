@@ -2,11 +2,31 @@
 
 [ext_resource type="Script" uid="uid://d3oyn58uaqqga" path="res://Game Scenes/AreaScripts/farm.gd" id="1_34seq"]
 [ext_resource type="PackedScene" uid="uid://cajbnosp1fbeq" path="res://Game Scenes/Land/FarmLand.tscn" id="1_ohc15"]
+[ext_resource type="PackedScene" uid="uid://dpjbwk4a6ffua" path="res://The Plants/PlantScenes/PurpleFlower.tscn" id="4_3nt1h"]
+[ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="5_gtcvr"]
 [ext_resource type="PackedScene" uid="uid://drrhktrpanuqx" path="res://The Plants/PlantScenes/Pumkin.tscn" id="7_3nt1h"]
 [ext_resource type="PackedScene" uid="uid://bhd2xellde2nj" path="res://The Plants/FruitScenes/Apple.tscn" id="7_3o8bk"]
 [ext_resource type="PackedScene" uid="uid://db1yoojm4q7rd" path="res://The Plants/FruitScenes/Cherry.tscn" id="8_0r1uo"]
 [ext_resource type="PackedScene" uid="uid://bfi1w2yy82660" path="res://The Plants/FruitScenes/Mushroom.tscn" id="9_vhtly"]
 [ext_resource type="PackedScene" uid="uid://b4lay5vj85x5t" path="res://The Plants/FruitScenes/Strawberries.tscn" id="10_gelx4"]
+
+[sub_resource type="Resource" id="Resource_0r1uo"]
+script = ExtResource("5_gtcvr")
+plant_name = "Lily"
+food_needed = 12
+food_consumed = 12
+time_until_hungry = 15.0
+fav_food = "Strawberries"
+metadata/_custom_type_script = "uid://d16hmprr7a2bu"
+
+[sub_resource type="Resource" id="Resource_gtcvr"]
+script = ExtResource("5_gtcvr")
+plant_name = "Daisy"
+food_needed = 12
+food_consumed = 12
+time_until_hungry = 15.0
+fav_food = "Strawberries"
+metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [node name="TheFarm" type="Node2D" unique_id=673281839]
 script = ExtResource("1_34seq")
@@ -23,6 +43,14 @@ position = Vector2(473, 293)
 
 [node name="Pumkin3" parent="Plants" unique_id=1080967605 instance=ExtResource("7_3nt1h")]
 position = Vector2(548, 252)
+
+[node name="PurpleFlower" parent="Plants" unique_id=1079809071 instance=ExtResource("4_3nt1h")]
+position = Vector2(1144, -22)
+plant_data = SubResource("Resource_0r1uo")
+
+[node name="PurpleFlower2" parent="Plants" unique_id=1376847687 instance=ExtResource("4_3nt1h")]
+position = Vector2(1256, -24)
+plant_data = SubResource("Resource_gtcvr")
 
 [node name="Fruit" type="Node2D" parent="." unique_id=1038027296]
 position = Vector2(35, 26)

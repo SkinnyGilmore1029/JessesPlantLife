@@ -4,8 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b7sntqiyfk0kn" path="res://Components/ComponentScenes/CollectableComponent.tscn" id="2_5pqqp"]
 [ext_resource type="Resource" uid="uid://c00euhtkie0av" path="res://Managers/Resources/Fruit Resources/Mushroom_Collectable.tres" id="3_o35em"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_eu4t8"]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_830d4"]
 radius = 13.038404
 
@@ -17,10 +15,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("1_7flm1")
 region_enabled = true
 region_rect = Rect2(80, 0, 16, 16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=549367407]
-shape = SubResource("CircleShape2D_eu4t8")
-disabled = true
 
 [node name="CollectableComponent" parent="." unique_id=507805451 instance=ExtResource("2_5pqqp")]
 collectable_data = ExtResource("3_o35em")

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ctdhbdn4figlt" path="res://Jesse/JesseScripts/jesseb.gd" id="1_7lwai"]
 [ext_resource type="Script" uid="uid://c1q7tdehspm3q" path="res://Jesse/JesseScripts/walk_state.gd" id="3_nmhgq"]
 [ext_resource type="Script" uid="uid://u66avsyksvgp" path="res://Managers/Scripts/node_state_machine.gd" id="3_pfpo0"]
+[ext_resource type="Script" uid="uid://crko5qdf3jfwd" path="res://Jesse/Jesse_raycast.gd" id="3_wugop"]
 [ext_resource type="Texture2D" uid="uid://l7ngwqu0vwfd" path="res://Assets/Pictures/People/Jesse.png" id="5_k20bo"]
 [ext_resource type="Script" uid="uid://c2i5s8iy6673d" path="res://Jesse/JesseScripts/Idle_state.gd" id="5_yaf2p"]
 [ext_resource type="Script" uid="uid://bejign6q2vvy4" path="res://Jesse/JesseScripts/Feeding_state.gd" id="6_k20bo"]
@@ -24,6 +25,13 @@ limit_top = -200
 limit_right = 1900
 limit_bottom = 1150
 editor_draw_limits = true
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1465084365]
+target_position = Vector2(0, 30)
+collision_mask = 32
+hit_from_inside = true
+collide_with_areas = true
+script = ExtResource("3_wugop")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1723299549]
 position = Vector2(-2, 3)

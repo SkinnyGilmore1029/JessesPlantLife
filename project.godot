@@ -24,6 +24,11 @@ SpawnManager="*uid://doe556g0kmr0"
 SignalHub="*uid://573rn8nkd6gw"
 PlayerUi="*uid://clee8bgopstj3"
 
+[debug]
+
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/unused_signal=0
+
 [display]
 
 window/size/viewport_width=640
@@ -486,6 +491,7 @@ Menu={
 2d_physics/layer_3="Collectables"
 2d_physics/layer_4="Feeding"
 2d_physics/layer_5="Eating"
+2d_physics/layer_6="Interact"
 
 [physics]
 

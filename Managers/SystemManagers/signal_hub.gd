@@ -11,45 +11,36 @@ extends Node2D
 
 ##Helps change the PumpkinCount label.text to match count from the CollectableComponent.
 ##Path to Label: VBoxContainer/MarginContainer2/GridContainer/PumpkinCount
-@warning_ignore("unused_signal")
 signal change_pumpkin_count(new_count)
 
 ##Helps change the PurpleFlowersCount label.text to match count from the CollectableComponent.
 ##Path to Label: VBoxContainer/MarginContainer2/GridContainer/PurpleFlowersCount
-@warning_ignore("unused_signal")
 signal change_purple_count(new_count)
 
 ##Helps change the PinkFlowersCount label.text to match count from the CollectableComponent.
 ##Path to Label: VBoxContainer/MarginContainer2/GridContainer/PinkFlowersCount
-@warning_ignore("unused_signal")
 signal change_pink_count(new_count)
 
 ##Helps change the VinePlantCount label.text to match count from the CollectableComponent.
 ##Path to Label: VBoxContainer/MarginContainer2/GridContainer/VinePlantCount
-@warning_ignore("unused_signal")
 signal change_vine_count(new_count)
 
 
 ##Helps change the AppleCountLabel label.text to match count from the CollectableComponent.
 ##Path to Label: VBoxContainer/MarginContainer/GridContainer/AppleCountLabel
-@warning_ignore("unused_signal")
 signal change_apple_count
 
 ##Helps change the CherriesCountLabel label.text to match count from the CollectableComponent.
 ##Path to Label: VBoxContainer/MarginContainer/GridContainer/CherriesCountLabel
-@warning_ignore("unused_signal")
 signal change_cherry_count
 
 ##Helps change the StrawberriesCountLabel label.text to match count from the CollectableComponent.
 ##Path to Label: VBoxContainer/MarginContainer/GridContainer/StrawberriesCountLabel
-@warning_ignore("unused_signal")
 signal change_strawberry_count
 
 ##Helps change the MushroomCountLabel label.text to match count from the CollectableComponent.
 ##Path to Label: VBoxContainer/MarginContainer/GridContainer/MushroomCountLabel
-@warning_ignore("unused_signal")
 signal change_mushroom_count
-
 
 
 #                           Player UI Label Counts
@@ -57,35 +48,27 @@ signal change_mushroom_count
 #             [Dev note: Don't forget to add to signal dictionary in collectables]
 
 ##Helps change the PumpkinUICount label on the player ui.
-@warning_ignore("unused_signal")
 signal change_pumpkin_ui_count(new_count)
 
 ##Helps change the PurpleUICount label on the player ui.
-@warning_ignore("unused_signal")
 signal change_purple_ui_count(new_count)
 
 ##Helps change the PinkUICount label on the player ui.
-@warning_ignore("unused_signal")
 signal change_pink_ui_count(new_count)
 
 ##Helps change the VineUICount label on the player ui.
-@warning_ignore("unused_signal")
 signal change_vine_ui_count(new_count)
 
 ##Helps change the AppleUICount label on the player ui.
-@warning_ignore("unused_signal")
 signal change_apple_ui_count
 
 ##Helps change the CherryUICount label on the player ui.
-@warning_ignore("unused_signal")
 signal change_cherry_ui_count
 
 ##Helps change the StrawberryUICount label on the player ui.
-@warning_ignore("unused_signal")
 signal change_strawberry_ui_count
 
 ##Helps change the MushroomUICount label on the player ui.
-@warning_ignore("unused_signal")
 signal change_mushroom_ui_count
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -94,20 +77,17 @@ signal change_mushroom_ui_count
 
 #Menu Signals
 #------------------------------------------------------------------------------------------------------------------------------
+
 ##Helps open the Seed Satchel from the PauseHub.
-@warning_ignore("unused_signal")
 signal open_seed_satchel
 
 ##Helps close the Seed Satchel from the PauseHub.
-@warning_ignore(("unused_signal"))
 signal close_seed_satchel
 
 ##Helps open the Fruit Satchel from the PauseHub.
-@warning_ignore(("unused_signal"))
 signal open_fruit_satchel
 
 ##Helps close the Fruit Satchel from the PauseHub.
-@warning_ignore(("unused_signal"))
 signal close_fruit_satchel
 
 #------------------------------------------------------------------------------------------------------------------------------
@@ -116,18 +96,23 @@ signal close_fruit_satchel
 #------------------------------------------------------------------------------------------------------------------------------
 
 ##helps change the age of the plant do not know if im going to use it.
-@warning_ignore("unused_signal")
 signal change_age
 
 ##Helps change the mood of the plant depending on hunger.
-@warning_ignore("unused_signal")
 signal change_mood
 
 
 ##Helps change the hunger and helps control the mood of the plant.
-@warning_ignore("unused_signal")
 signal change_hunger
 
 ##Helps take the food the plant has consumed to controller the hunger of the plant.
-@warning_ignore("unused_signal")
 signal take_food_consumed
+
+##Helps Update the plants Ui to let the player know about the plant.
+signal show_plant_ui
+
+##Helps close the plants Ui when the player moves away.
+signal close_plant_ui
+
+##Helps let the user know the can feed the plant
+signal can_feed_plant
