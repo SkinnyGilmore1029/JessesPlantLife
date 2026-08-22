@@ -6,26 +6,27 @@
 [ext_resource type="PackedScene" uid="uid://b6glpsoh6q1r" path="res://Components/ComponentScenes/TimerComponent.tscn" id="4_ikdss"]
 [ext_resource type="PackedScene" uid="uid://bcblt421q0nxy" path="res://Components/ComponentScenes/GettingFedComponent.tscn" id="4_jr51m"]
 [ext_resource type="PackedScene" uid="uid://dc5i2fg57wafa" path="res://Components/ComponentScenes/InteractComponent.tscn" id="6_v0wld"]
+[ext_resource type="Texture2D" uid="uid://bbo8w60nhmoqv" path="res://Assets/Pictures/Plants/happy symbol.png" id="7_mxjvk"]
+[ext_resource type="Script" uid="uid://ckn7r0hhbbarl" path="res://The Plants/PlantScripts/mood_icon.gd" id="8_psmjp"]
 
 [sub_resource type="Resource" id="Resource_ikdss"]
 script = ExtResource("2_m7vwf")
-fav_food = "Strawberries"
+time_until_hungry = 120.0
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_830d4"]
-size = Vector2(8.333334, 14)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cg0r8"]
+radius = 4.0
+height = 15.333334
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_830d4"]
 radius = 11.0
-height = 42.0
+height = 38.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_guak4"]
 radius = 15.0
 height = 48.0
 
-[node name="PurpleFlower" type="StaticBody2D" unique_id=1079809071]
-collision_layer = 18
-collision_mask = 9
+[node name="PurpleFlower" type="Node2D" unique_id=1702614585]
 script = ExtResource("1_m7vwf")
 plant_data = SubResource("Resource_ikdss")
 
@@ -33,23 +34,38 @@ plant_data = SubResource("Resource_ikdss")
 scale = Vector2(3, 3)
 texture = ExtResource("1_856iu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1720305147]
-position = Vector2(-11, -17)
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=181607130]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1720305147]
+position = Vector2(-10, -20)
 scale = Vector2(3, 3)
-shape = SubResource("RectangleShape2D_830d4")
+shape = SubResource("CapsuleShape2D_cg0r8")
 
 [node name="GettingFedComponent" parent="." unique_id=410606877 instance=ExtResource("4_jr51m")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GettingFedComponent" unique_id=1464566007]
-position = Vector2(-11, -17)
+position = Vector2(-10, -19)
 shape = SubResource("CapsuleShape2D_830d4")
 debug_color = Color(0.5158667, 0.5757581, 0.061225876, 0.41960785)
 
 [node name="TimerComponent" parent="." unique_id=1323039985 instance=ExtResource("4_ikdss")]
 
 [node name="InteractComponent" parent="." unique_id=484913383 instance=ExtResource("6_v0wld")]
+position = Vector2(-1, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComponent" unique_id=1053388683]
-position = Vector2(-10, -17)
+position = Vector2(-9, -14)
 shape = SubResource("CapsuleShape2D_guak4")
 debug_color = Color(0.78787994, 0.42920652, 0.11164745, 0.41960785)
+
+[node name="MoodIcon" type="TextureRect" parent="." unique_id=1779590610]
+unique_name_in_owner = true
+offset_left = -29.0
+offset_top = -83.0
+offset_right = 13.0
+offset_bottom = -45.0
+texture = ExtResource("7_mxjvk")
+expand_mode = 3
+stretch_mode = 5
+script = ExtResource("8_psmjp")

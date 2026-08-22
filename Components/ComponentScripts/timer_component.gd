@@ -9,4 +9,4 @@ func _ready() -> void:
 	start()
 
 func _on_timeout() -> void:
-	SignalHub.take_food_consumed.emit()
+	get_parent().take_food_consumed_plant()

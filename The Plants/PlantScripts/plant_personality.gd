@@ -1,24 +1,26 @@
-extends StaticBody2D
+extends Node2D
 
 @export var plant_data: ChangingPlantData
 
 
 func _ready() -> void:
-	SignalHub.change_hunger.connect(change_hunger_state)
-	SignalHub.change_mood.connect(change_plant_mood)
-	SignalHub.take_food_consumed.connect(take_food_consumed)
+	pass
 
 
 func change_plant_mood() -> void:
 	match plant_data.hunger:
 		Plant_manager.PlantHunger.FULL:
 			plant_data.mood = Plant_manager.PlantMoods.HAPPY
+			%MoodIcon.set_mood(plant_data.mood)
 		Plant_manager.PlantHunger.CONTENT:
 			plant_data.mood = Plant_manager.PlantMoods.MEH
+			%MoodIcon.set_mood(plant_data.mood)
 		Plant_manager.PlantHunger.HUNGRY:
 			plant_data.mood = Plant_manager.PlantMoods.SAD
+			%MoodIcon.set_mood(plant_data.mood)
 		Plant_manager.PlantHunger.STARVING:
 			plant_data.mood = Plant_manager.PlantMoods.ANGRY
+			%MoodIcon.set_mood(plant_data.mood)
 
 func change_hunger_state() -> void:
 	#if it is full we don't need to do anything
@@ -35,8 +37,8 @@ func change_hunger_state() -> void:
 		plant_data.hunger = Plant_manager.PlantHunger.CONTENT
 	else:
 		plant_data.hunger = Plant_manager.PlantHunger.FULL
-	SignalHub.change_mood.emit()
+	change_plant_mood()
 
-func take_food_consumed() -> void:
+func take_food_consumed_plant() -> void:
 	plant_data.food_consumed -=1
-	SignalHub.change_hunger.emit()
+	change_hunger_state()

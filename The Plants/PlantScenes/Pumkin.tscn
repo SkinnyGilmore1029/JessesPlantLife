@@ -1,28 +1,63 @@
 [gd_scene format=3 uid="uid://drrhktrpanuqx"]
 
+[ext_resource type="Script" uid="uid://coknafym5vnpx" path="res://The Plants/PlantScripts/plant_personality.gd" id="1_24nej"]
 [ext_resource type="Texture2D" uid="uid://co1kpd4aotkmh" path="res://Assets/Pictures/Plants/JessePlant pumpkin2.png" id="1_mcmkf"]
-[ext_resource type="Script" uid="uid://1yytif3xy5b8" path="res://The Plants/PlantScripts/pumkin.gd" id="1_opyvj"]
 [ext_resource type="Script" uid="uid://d16hmprr7a2bu" path="res://Components/ComponentScripts/plant_data.gd" id="2_gmk3n"]
+[ext_resource type="PackedScene" uid="uid://bcblt421q0nxy" path="res://Components/ComponentScenes/GettingFedComponent.tscn" id="4_cg0r8"]
+[ext_resource type="PackedScene" uid="uid://b6glpsoh6q1r" path="res://Components/ComponentScenes/TimerComponent.tscn" id="5_n5mj7"]
+[ext_resource type="PackedScene" uid="uid://dc5i2fg57wafa" path="res://Components/ComponentScenes/InteractComponent.tscn" id="6_hd855"]
+[ext_resource type="Texture2D" uid="uid://bbo8w60nhmoqv" path="res://Assets/Pictures/Plants/happy symbol.png" id="7_n5mj7"]
+[ext_resource type="Script" uid="uid://ckn7r0hhbbarl" path="res://The Plants/PlantScripts/mood_icon.gd" id="8_hd855"]
 
-[sub_resource type="Resource" id="Resource_830d4"]
+[sub_resource type="Resource" id="Resource_opyvj"]
 script = ExtResource("2_gmk3n")
-plant_name = "Pumpkin King"
-food_needed = 15
-time_until_hungry = 180.0
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_830d4"]
 radius = 8.0
 
-[node name="Pumkin" type="StaticBody2D" unique_id=508771186]
+[sub_resource type="CircleShape2D" id="CircleShape2D_guak4"]
+radius = 8.01561
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_leigx"]
+radius = 8.01561
+
+[node name="Pumkin" type="Node2D" unique_id=13853670]
 scale = Vector2(2, 2)
-script = ExtResource("1_opyvj")
-plant_data = SubResource("Resource_830d4")
+script = ExtResource("1_24nej")
+plant_data = SubResource("Resource_opyvj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=915820984]
 texture = ExtResource("1_mcmkf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2080601767]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=355657114]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2080601767]
 position = Vector2(1, -3)
 shape = SubResource("CircleShape2D_830d4")
-disabled = true
+
+[node name="GettingFedComponent" parent="." unique_id=410606877 instance=ExtResource("4_cg0r8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GettingFedComponent" unique_id=304058595]
+position = Vector2(0.5, -3)
+shape = SubResource("CircleShape2D_guak4")
+debug_color = Color(0.5158667, 0.5757581, 0.061225876, 0.41960785)
+
+[node name="TimerComponent" parent="." unique_id=1323039985 instance=ExtResource("5_n5mj7")]
+
+[node name="InteractComponent" parent="." unique_id=484913383 instance=ExtResource("6_hd855")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractComponent" unique_id=827830852]
+position = Vector2(1, -3)
+shape = SubResource("CircleShape2D_leigx")
+debug_color = Color(0.78787994, 0.42920652, 0.11164745, 0.41960785)
+
+[node name="MoodIcon" type="TextureRect" parent="." unique_id=587682190]
+unique_name_in_owner = true
+offset_left = -15.0
+offset_top = -43.5
+offset_right = 17.0
+offset_bottom = -11.5
+texture = ExtResource("7_n5mj7")
+stretch_mode = 5
+script = ExtResource("8_hd855")

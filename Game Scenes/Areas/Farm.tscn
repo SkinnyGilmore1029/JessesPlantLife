@@ -10,12 +10,38 @@
 [ext_resource type="PackedScene" uid="uid://bfi1w2yy82660" path="res://The Plants/FruitScenes/Mushroom.tscn" id="9_vhtly"]
 [ext_resource type="PackedScene" uid="uid://b4lay5vj85x5t" path="res://The Plants/FruitScenes/Strawberries.tscn" id="10_gelx4"]
 
+[sub_resource type="Resource" id="Resource_vhtly"]
+script = ExtResource("5_gtcvr")
+plant_name = "George"
+food_needed = 15
+food_consumed = 15
+time_until_hungry = 20.0
+fav_food = "Mushrooms"
+metadata/_custom_type_script = "uid://d16hmprr7a2bu"
+
+[sub_resource type="Resource" id="Resource_gelx4"]
+script = ExtResource("5_gtcvr")
+plant_name = "John"
+food_needed = 16
+food_consumed = 16
+time_until_hungry = 15.0
+fav_food = "Mushroom"
+metadata/_custom_type_script = "uid://d16hmprr7a2bu"
+
+[sub_resource type="Resource" id="Resource_wlhp1"]
+script = ExtResource("5_gtcvr")
+plant_name = "Bob"
+food_needed = 45
+food_consumed = 45
+time_until_hungry = 20.0
+metadata/_custom_type_script = "uid://d16hmprr7a2bu"
+
 [sub_resource type="Resource" id="Resource_0r1uo"]
 script = ExtResource("5_gtcvr")
 plant_name = "Lily"
 food_needed = 12
 food_consumed = 12
-time_until_hungry = 15.0
+time_until_hungry = 12.0
 fav_food = "Strawberries"
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
@@ -24,7 +50,7 @@ script = ExtResource("5_gtcvr")
 plant_name = "Daisy"
 food_needed = 12
 food_consumed = 12
-time_until_hungry = 15.0
+time_until_hungry = 10.0
 fav_food = "Strawberries"
 metadata/_custom_type_script = "uid://d16hmprr7a2bu"
 
@@ -36,13 +62,16 @@ script = ExtResource("1_34seq")
 [node name="Plants" type="Node2D" parent="." unique_id=1653861305]
 
 [node name="Pumkin" parent="Plants" unique_id=1919133114 instance=ExtResource("7_3nt1h")]
-position = Vector2(448, 214)
+position = Vector2(1452, 136)
+plant_data = SubResource("Resource_vhtly")
 
 [node name="Pumkin2" parent="Plants" unique_id=2025996071 instance=ExtResource("7_3nt1h")]
-position = Vector2(473, 293)
+position = Vector2(1557, 180)
+plant_data = SubResource("Resource_gelx4")
 
 [node name="Pumkin3" parent="Plants" unique_id=1080967605 instance=ExtResource("7_3nt1h")]
-position = Vector2(548, 252)
+position = Vector2(1679, 140)
+plant_data = SubResource("Resource_wlhp1")
 
 [node name="PurpleFlower" parent="Plants" unique_id=1079809071 instance=ExtResource("4_3nt1h")]
 position = Vector2(1144, -22)
@@ -56,16 +85,16 @@ plant_data = SubResource("Resource_gtcvr")
 position = Vector2(35, 26)
 
 [node name="Apple" parent="Fruit" unique_id=664540048 instance=ExtResource("7_3o8bk")]
-position = Vector2(311, 240)
+position = Vector2(-25, -167)
 
 [node name="Apple2" parent="Fruit" unique_id=1359070931 instance=ExtResource("7_3o8bk")]
-position = Vector2(188, 72)
+position = Vector2(37, -169)
 
 [node name="Apple3" parent="Fruit" unique_id=879495100 instance=ExtResource("7_3o8bk")]
-position = Vector2(125, 235)
+position = Vector2(42, -109)
 
 [node name="Apple4" parent="Fruit" unique_id=96694851 instance=ExtResource("7_3o8bk")]
-position = Vector2(89, 71)
+position = Vector2(-27, -114)
 
 [node name="Cherry" parent="Fruit" unique_id=1950515057 instance=ExtResource("8_0r1uo")]
 position = Vector2(789, 778)
@@ -80,13 +109,13 @@ position = Vector2(879, 775)
 position = Vector2(940, 775)
 
 [node name="Mushroom" parent="Fruit" unique_id=593324030 instance=ExtResource("9_vhtly")]
-position = Vector2(48, 795)
+position = Vector2(830, 435)
 
 [node name="Mushroom2" parent="Fruit" unique_id=2080237634 instance=ExtResource("9_vhtly")]
-position = Vector2(52, 852)
+position = Vector2(919, 434)
 
 [node name="Mushroom3" parent="Fruit" unique_id=635217501 instance=ExtResource("9_vhtly")]
-position = Vector2(110, 818)
+position = Vector2(767, 437)
 
 [node name="Strawberries" parent="Fruit" unique_id=253686764 instance=ExtResource("10_gelx4")]
 position = Vector2(577, -103)
